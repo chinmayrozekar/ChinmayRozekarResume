@@ -1,0 +1,226 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage{amsmath}
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2.0cm, right=2.0cm]%
+{geometry}
+\title{Micron Interview Prep}
+\author{Chinmay Rozekar }
+\date{March 2024}
+\begin{document}
+	\maketitle
+	
+	
+	\section{DDR Memory}
+	
+	\begin{enumerate}
+		\item ddddd
+	\end{enumerate}
+	
+	
+	
+	
+	\section{questions based on my Resume}	
+	
+	
+	\begin{enumerate}
+		\item \textbf{Can you walk us through your role in system-level testing for AMD's Ryzen 'Hawkpoint' series and how it prepared you for a role at our company?}
+		
+		
+		\begin{enumerate}
+			\item I work as a Product Development Engineer at in System Level Test (SLT) and it is my job to successfully oversee the entire lifecycle of the product from Tape out to Production.
+			
+			
+			
+			\item In my Role as a Product Development Engineer, I wear various hats. During Tape out and Bring up I am responsible for Characterization activities which include figuring the baseline curves and values for Vmin and Fmax for the product in the IRM spec thus aiding Product Defination.
+			
+			\item I am responsinble for performaing LAE  (Limiting Application Experiment) Charz to figure out the most limiting diagnostic tests / stressors on the product IP and characterize them.
+			
+			\item Basically  at SLT/ Prod Def. we test our Chips in mission mode as a customer would run our parts out in the field, but we test them aggressively
+			
+			%			\item our parts are tested in line with a Product bounding box and we test our products at a bounding box condition
+			%			
+			\item All our parts are Tested in a Linux Environment and we utilize software stacks like BIOS, device drivers, and firmware that are released to the custonmer
+			
+			\item basically if you see it this way, ATE tests for scan, MBIST, CREST, ATPG and a few other tests to insure that 99.5\%  of the test coverage is covered in the test.
+			
+			\item At SLt we catch that 0.5\% of the failures before the parts go out in the field
+			
+			\item I am also responsible for continuous yield monitoring and Data Analysis, monitoring yield drops package by package per product, rootcausing / debugging any issues that are repponsible for a yield fallout by making Pareto charts.
+			
+			\item And lastly I am responsinle for TTR (Test Time reduction) activities in our software Testprogram suite, scavenging for any seconds I can save to bring down testter time because time is money.
+			
+			\item I believe this experience has trained me think methodically and always look for the bigger picture in terms of product Def. I also gained a lot of ecperience working with crossfunctional teams in differnt timezones defining mission critical deadlines which  I believe would be a great asset in this role as well.
+			
+			
+		\end{enumerate}
+		
+		
+		%		-----------------
+		
+		\item \textbf{How did you achieve test time reduction (TTR) and what impact did this have on operational costs and DPPM yield analysis?}
+		
+		
+		\begin{enumerate}
+			\item Thanks for the question Tete, So the purpose of TTR is to reduce the Test time in the software stack by weeding out tests that either have a test time of $<1$ sec. or had a DPPM value of 0
+			
+			\item The way I do this is I look up Production data from last 60 days of our products across all packages. This data is arounf 50,000 units.
+			
+			\item Then I look at what are the commonn low DPPM diagnostic test across all packages and present it to the SoC IP owners. If I get a confirmation from Design team and Leadership that removing them from the stack will not have any impact on the coverage, I remove them from the SLT Test flow.
+			
+			\item These Tests are usually some redundant tests that are targetting the same IP or have been in the software stack from previous products.
+			
+			\item We have a DPPM calculator that does the DPPM calculation for us but iDPPM calculation is pretty simple, I mean its :
+			
+			\begin{equation}
+				\text{DPPM} = \left( \frac{\text{Defects Observed}}{\text{Total Size of the Sample or Population}} \right) \times 10^{6}
+			\end{equation}
+			
+			\noindent \textbf{Example, In a total of 500 units, 5 objects were rejected for some reasons. Hence,}
+			
+			\begin{equation}
+				\text{DPPM} = \left( \frac{5}{500} \right) \times 10^{6}
+			\end{equation}
+			\begin{equation}
+				\phantom{\text{DPPM}} = \left( \frac{1}{100} \right) \times 10^{6}
+			\end{equation}
+			\begin{equation}
+				\phantom{\text{DPPM}} = 10,000.
+			\end{equation}
+			
+			
+			
+			
+			
+		\end{enumerate}
+		
+		
+		
+		\item \textbf{Describe a challenging production yield issue you faced and how you performed root cause analysis to resolve it.}
+		
+		\begin{enumerate}
+			\item Excellent Question Tete, In the last quarter we had 2 APU products Phoenix and Hawkpoint (This is public so I can talk about it)  which are from the same SoC family and same FP7r2 package respectively
+			
+			\item So basically they were the same package.
+			
+			\item But what happened was there was a sudden 40\% yield gap between the two test programs that were in the production.
+			
+			\item First I ran a control group of 50 HPT units as baseline and did a bios/ FW regression between all the recent FWs that were released
+			
+			\item This proved my hypothesis that one of the FW that was causing this as it was impacting control and power delivery
+			
+			\item Next I set up meetings with Design team and IP architects and designed few experiments where I turned off features in the IP one by one like changing the  limits on EDC, AFLL, CLDO etc and played around with the Latch up voltage limits,
+			
+			\item Next I did a temperature study and fixed some Temperature issues where we were understesting or Overtesting our parts in the flow. Basically I had to do a deep dive into our codebase for this.
+			
+			\item Basically, it turned out that the test on which we were seeing failures was running too aggressively and hence throttling, which is why we had to switch to a low CaC workload and relax some of our guardbands and this fixed our issue.
+			
+		\end{enumerate}
+		
+		
+		\item \textbf{Can you explain the process of SoC Characterization for Product Definition and how it influenced product specifications}
+		
+		
+		\begin{enumerate}
+			\item When it comes to Characterization, In the entire Product Development, Chracterization happens on both ATE as well as SLT
+			
+			\item ATE charz is quick as it has a shorter run time but SLT charz takes a bit longer.
+			
+			\item  In Both Charz we do Freq/ Voltage sweep search. On ATE charz it is scan, Bist, Func/ IO. On SLT Charz we do F/V searches on most limiting tests and applications
+			
+			\item First we identify IP / Voltage rail and the clock domain to characterized based on prod spec.
+			eg. CoreClk runs on \(V_{dd}\)CPU rail.. GFXCLK runs on \(V_{dd}\)GFX rail and  FCLK runs on \(V_{dd}\)SOC rail.
+			
+			\item Next we we need to take into account that we characterize for a whole range for temperatures that we have guranteed to the  both hot and cold. cold is 25C and hot is 95C
+			
+			\item The next step is to figure out the applications that we are going to run in the Charz based on the IP
+			
+			\item The most imp thing is to determine what material you are using for charz, these coud be TT, FF SS, FS,  SF material baseed on the wafer
+			
+			\item Next thing is we disable some parameters in BIOS/ FW such as Thermal Slew rate for faster thermal response, we disable DFLL for Droop mitigation and enable DFLL for better Freq control
+			
+			\item The next step is to run these application in a form aof a burst flow to calculate Vmin and Fmax data points to form a curve or a bounding box.
+			
+			\item This bounding box serves as a skeleton for Product Defination
+			
+			
+		\end{enumerate}
+		
+		
+		\item \textbf{Discuss your experience with Atlassian BitBucket and how you used it to manage the test program codebase repository.}
+		
+		\begin{enumerate}
+			\item At AMD, I used  BitBucket to oversee our test program codebase, ensuring streamlined development and timely release processes across the product lifecycle.
+			
+			\item My role involved maintaining the repository, managing code reviews, and integrating changes.
+			
+			\item I audited thesoftware stack, and made sure misssion critical S/W and F/W updates were checked into the codebase during major product milestones
+			
+			
+			\item This experience sharpened my skills in version control and team collaboration, facilitating efficient and error-free updates to our testing protocols
+			
+			
+			\item It was crucial for enhancing CPU performance features and supporting cross-functional team efforts, demonstrating my capability to manage complex codebases in a dynamic development environment
+			
+			
+		\end{enumerate}
+		
+		
+		
+		\item \textbf{Detail a customer RMA debug issue you encountered and how you resolved it through secure fuse unlocking.}
+		
+		
+		\begin{enumerate}
+			\item We recently encountered an RMA issue from customer which has multiple problems. We had 3 customer returns.
+			
+			\item The first issue was that the prefrred cores were failing in the customer systems and the second issue was that the customer was facing a GFX hang which resulted in a BlueScreen of Death.
+			
+			\item We ususally handle RMA issues through our TestPrograms, but since it was an unrgent issue, I had to mannuly debug it
+			
+			\item First I unlocked the part using a Wombat and JTAG interface, overriding the secure fuses
+			
+			\item I ran our n Threaded performance workload and GFX workload in mission mode settings to see if there is a problem with our workload or F/W.
+			
+			\item Next I ran our n threaded CPU workloads with our GFX workloads concurrently to see if that replicates the issue since running it concurrently would stress the part even more, but that was not the case
+			
+			\item Next I replaced our N Threaded workload for a lower Cac workload and ran GFX workload concurrently, to see if the workload itself was the problem but that wasnt the problem either
+			
+			\item Next I synced with the GFX DLDO team to change the DLDO tuning and to see if lowering the voltage can help us
+			
+			\item we went back and forth trying differnt voltage settings between previous products and ultimatly figured out that GFX DLDO tuning was not updated from previous process nodes which led to GFX hang issues.
+			
+			\item And we also discovered that one of the units had a metal speedpath issue.
+			
+			
+			
+		\end{enumerate}
+		
+		
+		\item \textbf{What was your approach to establishing and managing an in-house server farm and APU client board setup?}
+		
+		
+		\begin{enumerate}
+			\item So our Team's SLT server which hosted our files and OSLT environmet was reaching its end of life
+			
+			\item So I made a server rack local to our team so that multiple SLT test beches can be stacked anf hosted together thus saving space
+			
+			\item we had a AMD EPYC server CPU's lying around from server team so I synced with my lab manager and ordered a Super Micro ATX board and built a server and installed Linux on it. 
+			
+			\item I installed Virtual Box for VM environment for each SLT Testbenches and installed OSLT RedHat OS on it.
+			
+			\item  The challenging part was to figure out the correct Network IP's and to setup DCHP for each bench.
+			
+			\item Once that was done, I installed Dediprog on the main server and wrote anautomation script that would automatically flash bios on all the Test bench, This enabled remote bios flashing for my team which previously someone has to manually go into the lab to do so.
+			
+			\item This improved team productivity.
+		\end{enumerate}
+		
+		
+	
+		
+		
+		
+		
+		%		--------------------
+		
+		
+	\end{enumerate}
+\end{document}

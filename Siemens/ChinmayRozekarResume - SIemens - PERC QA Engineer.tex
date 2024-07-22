@@ -1,0 +1,258 @@
+%-------------------------
+% Resume in Latex
+% Author : 
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+	\vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+	\item\small{
+		{#1 \vspace{-2pt}}
+	}
+}
+
+\newcommand{\resumeSubheading}[4]{
+	\vspace{-2pt}\item
+	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{\small#3} & \textit{\small #4} \\
+	\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+	\item
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\textit{\small#1} & \textit{\small #2} \\
+	\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+	\item
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\small#1 & #2 \\
+	\end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+	\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+	\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+	
+	%----------HEADING----------
+	% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+		%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+		%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+		% \end{tabular*}
+	
+	%	\begin{center}
+		%		\textbf{\Huge \scshape Jake Ryan} \\ \vspace{1pt}
+		%		\small 123-456-7890 $|$ \href{mailto:x@x.com}{\underline{jake@su.edu}} $|$ 
+		%		\href{https://linkedin.com/in/...}{\underline{linkedin.com/in/jake}} $|$
+		%		\href{https://github.com/...}{\underline{github.com/jake}}
+		%	\end{center}
+	
+	\begin{center}
+		\textbf{\Huge \scshape Chinmay Rozekar} \\ \vspace{1pt}
+		\small 646-510-5699 $|$ {chinmay.rozekar@gmail.com} $|$ 
+		\href{https://linkedin.com/in/...}{{Austin,TX 78744}} 
+		
+	\end{center}
+	
+	
+	%-----------OBJECTIVE-----------
+	
+	\section{Objective}
+	\begin{itemize}[leftmargin=0.15in, label={}]
+		\vspace{-10pt}
+		\item \resumeItem{Versatile Electrical Engineer with a strong foundation in Silicon Validation and MEMS, poised to bring 4+ years of product development and testing experience to the PERC QA Engineer role at Siemens, focusing on enhancing software quality and electronic design innovation..}
+	\end{itemize}
+	\vspace{-15pt}
+	
+	
+	\section{Professional Summary}
+	\begin{itemize}[leftmargin=0.15in, label={}]
+		\resumeSubSubheading{}{}
+		\resumeItemListStart
+		\vspace{-15pt}
+		\resumeItem{Versatile engineer with 4+ years in Silicon Validation, adept in both Pre-Silicon and Post-Silicon environments, specializing in system-level testing and product quality enhancement.}
+		\resumeItem{Committed to leveraging technical expertise for reducing operational costs and enhancing product specifications.}
+		\resumeItem{Excels in cross-functional team collaboration, test automation with Python, C/C++, and Java, and innovative problem-solving.}
+		% \resumeItem{Seeks a dynamic engineering role to apply a broad skill set in Silicon Validation and Hardware Engineering.}
+		\resumeItemListEnd
+	\end{itemize}
+	\vspace{-15pt}
+	
+	
+	
+	%-----------EXPERIENCE-----------
+	\section{Experience}
+	\resumeSubHeadingListStart
+	
+	\resumeSubheading
+	{Product Development Engineer}{July 2020 -- Present}
+	{Advanced Micro Devices (AMD)}{Austin, TX}
+	%\vspace{-9pt}
+	\resumeSubSubheading{System Level Testing (SLT)}{}
+	\resumeItemListStart
+	\resumeItem{Led system-level testing for AMD's Ryzen 8040 'Hawkpoint' series, Accelerated Processing Units (APUs), ensuring adherence to customer environment standards.}
+	
+	\resumeItem{Spearheaded Test Time Reduction (TTR), eliminated redundant tests, for reducing operational costs through DPPM Yield Analysis in Production.}
+	\resumeItem{Experienced in monitoring production yield and debugging/root cause analysis of high-Pareto items in production fallout.}
+	\resumeItem{Experienced in performing SoC Characterization for Product Definition by setting Test-Program flows on volume testing. }
+	
+	\resumeItem{Maintained the test program codebase repository using Atlassian BitBucket, overseeing the development and release of test content throughout the product roadmap.}
+	\resumeItem{Collaborated with Diagnostic, BIOS, and Design teams to enhance CPU performance features, contributing to product specification improvements.}
+	\resumeItem{Experienced in Customer RMA Debug issues through secure fuse unlocking during Field Return Analysis (FRA).}
+	\resumeItem{Established and managed an in-house server farm and APU client board setup, ensuring robust testing environments and streamlining development.}
+	
+	
+	
+	
+	
+	
+	
+	\resumeItemListEnd
+	
+	
+	
+	\resumeSubheading
+	{Product Engineering Co-Op}{Jan. 2019 -- Dec.2019}
+	{Advanced Micro Devices (AMD)}{Austin, TX}
+	\resumeItemListStart
+	\resumeItem{Designed and automated test programs for Human Body Model Testing, reducing Engineering time by 90\%.}
+	\resumeItem{Reverse-engineered and redesigned a 20-year-old robotic graphical user interface in Python, reducing engineering time by 95\%.}
+	\resumeItem{Conducted stress tests on AMD products according to industry standards, qualifying products for production.}
+	\resumeItem{Performed scheduled calibration and waveform verification for preventive maintenance as per ISO 9000 standards}
+	\resumeItem{Conducted Design of Experiments on AMD products for Capacitive Modeling to optimize protection circuitry}
+	\resumeItemListEnd
+	
+	\resumeSubheading
+	{Graduate Research Assistant}{Jan 2020 -- May 2020}
+	{Rochester Institute of technology}{Rochester, NY}
+	\resumeItemListStart
+	\resumeItem{Developed a process flow for thin film IC development, covering various fabrication steps}
+	\resumeItem{Designed and simulated NMOS devices to determine sub-threshold voltages and model leakage current}
+	\resumeItem{Conducted electrical device characterization to optimize gate oxide thickness on NMOS devices.}
+	
+	\resumeItemListEnd
+	\resumeSubHeadingListEnd
+	\vspace{-15pt}
+	
+	%
+	%-----------Technical  SKILLS-----------
+	\section{Technical Skills}
+	\begin{itemize}[leftmargin=0.15in, label={}]
+		\small{\item{
+				\textbf{Process Engineering}{: Thin Films, PVD, CVD, Sputtering, Dry Etch, Metrology, Characterization} \\
+				\textbf{Languages}{: Java, Python, BASH, C/C++, SQL, HTML/CSS, XML, Markdown, MATLAB, Perl} \\
+				\textbf{Libraries}{: Matplotlib, Pandas, Numpy, Scikit-learn, Selenium} \\
+				\textbf{Developer Tools}{: Git, Jira, Confluence, Linux, CI/CD, IntelliJ Idea, VS Code, PyCharm, Eclipse, Jupyter, Anaconda, JSON, Notepad++, LaTeX} \\
+				\textbf{Protocols}{: JTAG, PCIE, DFT, Boundry SCAN, ATPG} \\
+				\textbf{Simulation}{: KiCAD, SolidWorks, COMSOL Multiphysics, Silvaco-Athena, Pyxis(Mentor Graphics)} \\
+				\textbf{Data Analysis}{: Excel, Power-BI, JMP, Python} \\
+		}}
+	\end{itemize}
+	
+	%-----------PROJECTS-----------
+	\section{Projects}
+	\resumeSubHeadingListStart
+	
+	\resumeProjectHeading
+	{\textbf{Review of Thin Film Technologies for Flexible Electronics} }{Jan 2020 -- May. 2020}
+	\resumeItemListStart
+	\resumeItem{Designed a simulation model for growing a 1 µm layer of flexible crystalline Si substrate on top of Tungsten metal layer using SOI method in Silvaco Athena.}
+	\resumeItemListEnd
+	
+	
+	\resumeProjectHeading
+	{\textbf{A Thermally actuated four-legged MEMS based Silicon Micro-robot} }{May 2018 -- Dec. 2018}
+	\resumeItemListStart
+	\resumeItem{Designed and fabricated a thermally actuated MEMS based Silicon micro-robot. Modeled design in CAD / Solidworks and Heat Transfer using COMSOL multi-physics FEA.}
+	\resumeItemListEnd
+	\resumeSubHeadingListEnd
+	
+	
+	
+	%-----------EDUCATION-----------
+	\section{Education}
+	\resumeSubHeadingListStart
+	\resumeSubheading
+	{Rochester Institute of Technology}{Rochester, NY}
+	{Master of Science, Electrical Engineering}{Aug. 2017 -- May 2020}
+	\resumeSubheading
+	{Bharati Vidyapeeth University}{Pune, India}
+	{Bachelor of Technology, Electrical Engineering}{Aug. 2012 -- June 2016}
+	\resumeSubHeadingListEnd
+	
+	
+	
+	
+	%-------------------------------------------
+\end{document}

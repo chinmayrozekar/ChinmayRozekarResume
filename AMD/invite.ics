@@ -1,0 +1,91 @@
+BEGIN:VCALENDAR
+METHOD:REQUEST
+PRODID:Microsoft Exchange Server 2010
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:Central Standard Time
+BEGIN:STANDARD
+DTSTART:16010101T020000
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0600
+RRULE:FREQ=YEARLY;INTERVAL=1;BYDAY=1SU;BYMONTH=11
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:16010101T020000
+TZOFFSETFROM:-0600
+TZOFFSETTO:-0500
+RRULE:FREQ=YEARLY;INTERVAL=1;BYDAY=2SU;BYMONTH=3
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+ORGANIZER;CN="Gallardo, Art":mailto:Art.Gallardo@amd.com
+ATTENDEE;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;CN=chinmay ro
+ zekar:mailto:chinmay.rozekar@gmail.com
+ATTACH:CID:F7DB8968637D56499433A392787C2DDF@namprd12.prod.outlook.com
+DESCRIPTION;LANGUAGE=en-US:\n______________________________________________
+ __________________________________\nMicrosoft Teams meeting\nJoin on your 
+ computer\, mobile app or room device\nClick here to join the meeting<https
+ ://teams.microsoft.com/l/meetup-join/19%3ameeting_ODk3ZWE1NzMtNWNiZi00ODJh
+ LThmZTEtOGIzNTAzNzkxYmUz%40thread.v2/0?context=%7b%22Tid%22%3a%223dd8961f-
+ e488-4e60-8e11-a82d994e183d%22%2c%22Oid%22%3a%220debdf13-635f-4944-a476-24
+ eecf65fe71%22%7d>\nMeeting ID: 214 606 406 697\nPasscode: boa9Um\nDownload
+  Teams<https://www.microsoft.com/en-us/microsoft-teams/download-app> | Joi
+ n on the web<https://www.microsoft.com/microsoft-teams/join-a-meeting>\nJo
+ in with a video conferencing device\nteams@amd.onpexip.com\nVideo Conferen
+ ce ID: 118 202 755 3\nAlternate VTC instructions<https://pexip.me/teams/am
+ d.onpexip.com/1182027553>\nOr call in (audio only)\n+1 737-222-7485\,\,107
+ 976682#<tel:+17372227485\,\,107976682#>   United States\, Austin\nPhone Co
+ nference ID: 107 976 682#\nFind a local number<https://dialin.teams.micros
+ oft.com/ce2d7803-c193-4a70-8d91-944a462318d3?id=107976682> | Reset PIN<htt
+ ps://dialin.teams.microsoft.com/usp/pstnconferencing>\nLearn More<https://
+ aka.ms/JoinTeamsMeeting> | Meeting options<https://teams.microsoft.com/mee
+ tingOptions/?organizerId=0debdf13-635f-4944-a476-24eecf65fe71&tenantId=3dd
+ 8961f-e488-4e60-8e11-a82d994e183d&threadId=19_meeting_ODk3ZWE1NzMtNWNiZi00
+ ODJhLThmZTEtOGIzNTAzNzkxYmUz@thread.v2&messageId=0&language=en-US>\n______
+ __________________________________________________________________________
+ \n\n
+UID:040000008200E00074C5B7101A82E0080000000050EAAEFC767BDA01000000000000000
+ 010000000C7CE776A64B86A40ACD03A8D03FCDA6E
+SUMMARY;LANGUAGE=en-US:AMD Touchpoint - Chinmay and Art - 40877 Data Center
+  Correlation Validation Engineer
+DTSTART;TZID=Central Standard Time:20240325T150000
+DTEND;TZID=Central Standard Time:20240325T153000
+CLASS:PUBLIC
+PRIORITY:5
+DTSTAMP:20240321T150604Z
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+SEQUENCE:0
+LOCATION;LANGUAGE=en-US:Microsoft Teams Meeting
+X-MICROSOFT-CDO-APPT-SEQUENCE:0
+X-MICROSOFT-CDO-OWNERAPPTID:1070938088
+X-MICROSOFT-CDO-BUSYSTATUS:TENTATIVE
+X-MICROSOFT-CDO-INTENDEDSTATUS:BUSY
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-CDO-INSTTYPE:0
+X-MICROSOFT-SKYPETEAMSMEETINGURL:https://teams.microsoft.com/l/meetup-join/
+ 19%3ameeting_ODk3ZWE1NzMtNWNiZi00ODJhLThmZTEtOGIzNTAzNzkxYmUz%40thread.v2/
+ 0?context=%7b%22Tid%22%3a%223dd8961f-e488-4e60-8e11-a82d994e183d%22%2c%22O
+ id%22%3a%220debdf13-635f-4944-a476-24eecf65fe71%22%7d
+X-MICROSOFT-SCHEDULINGSERVICEUPDATEURL:https://api.scheduler.teams.microsof
+ t.com/teams/3dd8961f-e488-4e60-8e11-a82d994e183d/0debdf13-635f-4944-a476-2
+ 4eecf65fe71/19_meeting_ODk3ZWE1NzMtNWNiZi00ODJhLThmZTEtOGIzNTAzNzkxYmUz@th
+ read.v2/0
+X-MICROSOFT-SKYPETEAMSPROPERTIES:{"cid":"19:meeting_ODk3ZWE1NzMtNWNiZi00ODJ
+ hLThmZTEtOGIzNTAzNzkxYmUz@thread.v2"\,"private":true\,"type":0\,"mid":0\,"
+ rid":0\,"uid":null}
+X-MICROSOFT-DONOTFORWARDMEETING:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MICROSOFT-REQUESTEDATTENDANCEMODE:DEFAULT
+X-MICROSOFT-ISRESPONSEREQUESTED:TRUE
+X-MICROSOFT-LOCATIONS:[ { "DisplayName" : "Microsoft Teams Meeting"\, "Loca
+ tionAnnotation" : ""\, "LocationSource" : 0\, "Unresolved" : false\, "Loca
+ tionUri" : "" } ]
+BEGIN:VALARM
+DESCRIPTION:REMINDER
+TRIGGER;RELATED=START:-PT15M
+ACTION:DISPLAY
+END:VALARM
+END:VEVENT
+END:VCALENDAR
