@@ -1,6 +1,6 @@
 # Chinmay Rozekar Resume
 
-This Repository is based oforginal repository : https://github.com/sb2nov/resume/
+This Repository is based of orginal repository : https://github.com/sb2nov/resume/
 
 # Motivation:
 
