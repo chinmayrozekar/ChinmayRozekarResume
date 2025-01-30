@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.12)  30 JAN 2025 10:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.12)  30 JAN 2025 11:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -413,32 +413,41 @@ L3 programming layer <2024-12-25>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `Aishwarya_Katare_Resume_2025.out' has not ch
-anged.
-(rerunfilecheck)             Checksum: DED866E56C1E562B8C283093BF2D5C19;566.
+
+Package rerunfilecheck Warning: File `Aishwarya_Katare_Resume_2025.out' has cha
+nged.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Aishwarya_Katare_Resume_2025.out':
+(rerunfilecheck)             Before: DED866E56C1E562B8C283093BF2D5C19;566
+(rerunfilecheck)             After:  0DFF58FAF5ABFDAA5BDA4ED3D482E42E;483.
  ) 
 Here is how much of TeX's memory you used:
- 10867 strings out of 473536
- 174583 string characters out of 5713504
- 610903 words of memory out of 5000000
- 33960 multiletter control sequences out of 15000+600000
- 565105 words of font info for 60 fonts, out of 8000000 for 9000
+ 10866 strings out of 473536
+ 174659 string characters out of 5713504
+ 609903 words of memory out of 5000000
+ 33959 multiletter control sequences out of 15000+600000
+ 565062 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,79p,322b,636s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Z004Z94N\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\t
-crm1095.pk> <C:\Users\Z004Z94N\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
-/dpi600\tcrm1000.pk><C:/Users/Z004Z94N/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Z004Z94N/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Z004Z94N/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Z004Z94N/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Z
-004Z94N/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+ 75i,11n,79p,322b,558s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{section.6} has been referenced but does not exist, 
+replaced by a fixed one
+
+ <C:\Users\Z004Z94N\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcr
+m1000.pk><C:/Users/Z004Z94N/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmbx10.pfb><C:/Users/Z004Z94N/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Z004Z94N/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Z004Z94N/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Z004Z94N/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/
+Z004Z94N/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb
 ><C:/Users/Z004Z94N/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmsy6.pfb><C:/Users/Z004Z94N/AppData/Local/Programs/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmti10.pfb>
-Output written on Aishwarya_Katare_Resume_2025.pdf (2 pages, 114354 bytes).
+m/cmti10.pfb>
+Output written on Aishwarya_Katare_Resume_2025.pdf (2 pages, 112823 bytes).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
+ 84 PDF objects out of 1000 (max. 8388607)
  9 named destinations out of 1000 (max. 500000)
  49 words of extra memory for PDF output out of 10000 (max. 10000000)
 

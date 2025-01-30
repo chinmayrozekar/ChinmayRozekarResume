@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.12)  30 JAN 2025 10:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.1.12)  12 JAN 2025 15:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./Aishwarya_Katare_Resume_2025.tex
-(Aishwarya_Katare_Resume_2025.tex
+**./Generic_Template.tex
+(Generic_Template.tex
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
 (C:\Users\Z004Z94N\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -326,8 +326,8 @@ pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count287
 \l__pdf_internal_box=\box56
-) (Aishwarya_Katare_Resume_2025.aux)
-\openout1 = `Aishwarya_Katare_Resume_2025.aux'.
+) (Generic_Template.aux)
+\openout1 = `Generic_Template.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
 LaTeX Font Info:    ... okay on input line 76.
@@ -364,9 +364,9 @@ LaTeX Font Info:    ... okay on input line 76.
 \everyMPtoPDFconversion=\toks27
 )
 Package hyperref Info: Link coloring OFF on input line 76.
- (Aishwarya_Katare_Resume_2025.out) (Aishwarya_Katare_Resume_2025.out)
+ (Generic_Template.out) (Generic_Template.out)
 \@outlinefile=\write3
-\openout3 = `Aishwarya_Katare_Resume_2025.out'.
+\openout3 = `Generic_Template.out'.
 
 
 
@@ -404,7 +404,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                Make it at least 4.08003pt, for example:
 (fancyhdr)                \setlength{\footskip}{4.08003pt}.
 
-[2] (Aishwarya_Katare_Resume_2025.aux)
+[2] (Generic_Template.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
@@ -413,18 +413,23 @@ L3 programming layer <2024-12-25>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `Aishwarya_Katare_Resume_2025.out' has not ch
-anged.
-(rerunfilecheck)             Checksum: DED866E56C1E562B8C283093BF2D5C19;566.
+
+Package rerunfilecheck Warning: File `Generic_Template.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Generic_Template.out':
+(rerunfilecheck)             Before: 6F13E8C109D53910153D82F80328D31B;566
+(rerunfilecheck)             After:  DED866E56C1E562B8C283093BF2D5C19;566.
  ) 
 Here is how much of TeX's memory you used:
  10867 strings out of 473536
- 174583 string characters out of 5713504
- 610903 words of memory out of 5000000
+ 174107 string characters out of 5713504
+ 609843 words of memory out of 5000000
  33960 multiletter control sequences out of 15000+600000
  565105 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,79p,322b,636s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,79p,310b,564s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Z004Z94N\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\t
 crm1095.pk> <C:\Users\Z004Z94N\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
 /dpi600\tcrm1000.pk><C:/Users/Z004Z94N/AppData/Local/Programs/MiKTeX/fonts/type
@@ -436,7 +441,7 @@ Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Z
 ><C:/Users/Z004Z94N/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
 m/cmsy6.pfb><C:/Users/Z004Z94N/AppData/Local/Programs/MiKTeX/fonts/type1/public
 /amsfonts/cm/cmti10.pfb>
-Output written on Aishwarya_Katare_Resume_2025.pdf (2 pages, 114354 bytes).
+Output written on Generic_Template.pdf (2 pages, 113614 bytes).
 PDF statistics:
  89 PDF objects out of 1000 (max. 8388607)
  9 named destinations out of 1000 (max. 500000)
