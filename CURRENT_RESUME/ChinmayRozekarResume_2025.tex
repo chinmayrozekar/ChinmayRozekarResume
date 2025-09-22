@@ -1,0 +1,379 @@
+%=========================================% Font encoding for better PDF compatibility
+
+\input{glyphtounicode}
+
+%--------------------------------------------------------------------------
+% FONT OPTIONS (Currently using default fonts)
+%--------------------------------------------------------------------------
+% Uncomment one of the following for different font families:
+
+% Sans-serif options:
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% Serif options:
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+%--------------------------------------------------------------------------
+% PAGE SETUP & FORMATTING
+%--------------------------------------------------------------------------
+
+% \pagestyle{fancy} % Removed duplicate, already set after package imports
+
+% CHINMAY ROZEKAR - RESUME IN LATEX
+%==========================================================================
+% Author: Chinmay Rozekar
+% Based off of: https://github.com/sb2nov/resume
+% License: MIT
+%
+% QUICK NAVIGATION:
+% - Line ~20:  Document Class & Package Imports
+% - Line ~50:  Page Setup & Formatting 
+% - Line ~80:  Custom Commands & Macros
+% - Line ~130: Resume Content Starts
+%   - Line ~140: Header/Contact Info
+%   - Line ~160: Professional Summary  
+%   - Line ~180: Experience Section
+%   - Line ~240: Technical Skills Section
+%   - Line ~270: Projects Section
+%   - Line ~380: Education Section
+%==========================================================================
+
+%--------------------------------------------------------------------------
+% DOCUMENT CLASS & PACKAGE IMPORTS
+%--------------------------------------------------------------------------
+\documentclass[letterpaper,11pt]{article}
+
+% Core packages for layout and formatting
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+
+% Hyperlinks and navigation
+\usepackage[hidelinks]{hyperref}
+
+% Headers, footers, and language support
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+% Font encoding for better PDF compatibility
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+% Remove headers and footers
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Page margins - create more space for content
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+% Text alignment and URL styling
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section title formatting (creates the horizontal line under section names)
+\titleformat{\section}{
+	\vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%--------------------------------------------------------------------------
+% CUSTOM COMMANDS & MACROS
+%--------------------------------------------------------------------------
+% These commands define the structure and formatting for resume sections
+
+% Basic resume item (bullet point)
+\newcommand{\resumeItem}[1]{
+	\item\small{
+		{#1 \vspace{-2pt}}
+	}
+}
+
+% Job/Education entry with title, dates, company/school, and location
+\newcommand{\resumeSubheading}[4]{
+	\vspace{-2pt}\item
+	\begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{\small#3} & \textit{\small #4} \\
+	\end{tabular*}\vspace{-7pt}
+}
+
+% Sub-heading for additional positions at same company
+\newcommand{\resumeSubSubheading}[2]{
+	\item
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\textit{\small#1} & \textit{\small #2} \\
+	\end{tabular*}\vspace{-7pt}
+}
+
+% Project heading with title and dates
+\newcommand{\resumeProjectHeading}[2]{
+	\item
+	\begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+		\small#1 & #2 \\
+	\end{tabular*}\vspace{-7pt}
+}
+
+% Single resume item with less spacing
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+% Custom bullet style for sub-items
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% List environments for organizing resume sections
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%==========================================================================
+% RESUME CONTENT BEGINS
+%==========================================================================
+
+\begin{document}
+
+%--------------------------------------------------------------------------
+% HEADER & CONTACT INFORMATION
+%--------------------------------------------------------------------------
+% Alternative header formats (commented out):
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+% \begin{center}
+%   \textbf{\Huge \scshape Jake Ryan} \\ \vspace{1pt}
+%   \small 123-456-7890 $|$ \href{mailto:x@x.com}{\underline{jake@su.edu}} $|$ 
+%   \href{https://linkedin.com/in/...}{\underline{linkedin.com/in/jake}} $|$
+%   \href{https://github.com/...}{\underline{github.com/jake}}
+% \end{center}
+
+% Current header format:
+\begin{center}
+	\textbf{\Huge \scshape Chinmay Rozekar} \\ \vspace{1pt}
+	\small 646-510-5699 $|$ \href{mailto:}{chinmay.rozekar@gmail.com} $|$ 
+	\href{Linkedin:}{linkedin.com/in/chinmayrozekar} $|$ 
+	\href{Github:}{github.com/chinmayrozekar} 
+\end{center}
+
+
+%--------------------------------------------------------------------------
+% PROFESSIONAL SUMMARY SECTION
+%--------------------------------------------------------------------------
+% Optional objective section (currently commented out):
+% \section{Objective}
+% \begin{itemize}[leftmargin=0.15in, label={}]
+%	\vspace{-10pt}
+%	\item \resumeItem{Seeking to leverage my 4+ years of Silicon Validation expertise and cross-functional team collaboration skills to drive post-silicon characterization and optimization efforts at AMD Datacenter products.}
+% \end{itemize}
+% \vspace{-15pt}
+
+\section{Professional Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+	\resumeSubSubheading{}{}
+	\resumeItemListStart
+	\vspace{-15pt}
+	\resumeItem{Software QA Engineer with 5+ years semiconductor experience at Siemens EDA and AMD, achieving 90\%+ regression coverage and reducing operational costs through test automation and process optimization.}
+	\resumeItem{AI/ML engineer developing production solutions including ensemble models, neural networks, computer vision, and MLOps pipelines using Python, TensorFlow, and cloud deployment.}
+	% \resumeItem{Technical professional combining semiconductor validation expertise with emerging AI capabilities to automate workflows and enhance product reliability in cross-functional environments.}
+	\resumeItemListEnd
+\end{itemize}
+\vspace{-15pt}
+
+%--------------------------------------------------------------------------
+% WORK EXPERIENCE SECTION  
+%--------------------------------------------------------------------------
+\section{Experience}
+\resumeSubHeadingListStart
+
+
+% Siemens EDA Software QA Engineer position
+\resumeSubheading{Software QA Engineer}{July 2024 -- present}{Siemens EDA (Mentor Graphics)}{Wilsonville, OR}
+\resumeItemListStart
+\resumeItem{Designed and maintained detailed test cases for Calibre PERC features, achieving over 90\% regression coverage and contributing to quarterly product releases between June 2024 and September 2025.}
+\resumeItem{Automated key QA tasks such as test case cloning, export management, and validation log parsing for SVRF, DRC, and LVS tests, reducing manual errors and cutting regression cycle times by 20\% during continuous validation phases.}
+\resumeItem{Collaborated with developers and QA engineers to troubleshoot and resolve critical product issues, improving test failure diagnostics and reducing defect resolution time by 15\% over the project period.}
+\resumeItem{Implemented standardized workflows to improve test data handling and result validation, resulting in consistent and reproducible test outputs verified on monthly validation cycles.}
+\resumeItemListEnd
+
+% AMD Product Development Engineer position
+\resumeSubheading
+	{Product Development Engineer}{July 2020 -- March 2024}
+	{Advanced Micro Devices (AMD)}{Austin, TX}
+	% Alternative formatting options (commented out):
+	% \vspace{-9pt}
+	% \resumeSubSubheading{System Level Testing (SLT)}{}
+\resumeItemListStart
+\resumeItem{Led system-level testing for AMD's Ryzen 8040 'Hawkpoint' series Accelerated Processing Units (APUs) in Java and Linux, designing and overseeing 100+ test scenarios to test and validate 14 SoC IPs.}
+
+\resumeItem{Spearheaded Test Time Reduction (TTR) initiative, eliminating 10\% of redundant tests and reducing operational costs by 5\% through detailed DPPM Yield Analysis in Production.}
+\resumeItem{Generated detailed test reports, collected parametric data for voltage, frequency, and thermal plots, leading to a 10\% improvement in product reliability over 3 release cycles.}
+\resumeItem{Analyzed failure logs and debugged issues, creating and tracking JIRA tickets and leveraging Confluence for documentation. Promptly escalated critical issues and collaborated with cross-functional teams across different time zones to ensure swift resolutions.}
+\resumeItem{Collaborated in SoC design changes and dynamically revised test plan strategies, identifying early-stage software bugs. Proactive contributions led to significant refinements in test content, boosting overall quality and reliability.}
+\resumeItem{Led defect management efforts, categorizing low Sidd (Static Idd) marginal units from Typical-Typical (TT)/ fast units, and conducted SoC characterization on marginal units to pinpoint stress tests that caused IP failures. Utilized box plots to verify if VF values met product specifications.}
+\resumeItem{Effectively managed customer RMA issues by diagnosing and resolving the majority of hardware failures in-house, minimizing escalations. Contributed to root cause analyses and documentation in RMA meetings, enhancing product reliability and customer trust.}
+
+
+
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-15pt}
+
+%--------------------------------------------------------------------------
+% TECHNICAL SKILLS SECTION
+%--------------------------------------------------------------------------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+	\small{\item{
+		\textbf{Languages}{: Shell, TCL/TK, SVRF, Python, Java, C/C++, Perl } \\
+		\textbf{AI/ML}{: TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn, SMOTE, Ensemble Methods, Neural Networks, Computer Vision, NLP, RAG, ChromaDB, SentenceTransformers} \\
+		\textbf{Cloud/DevOps}{: Docker, Flask, Streamlit, Hugging Face Spaces, CI/CD, Git, MLOps} \\
+		\textbf{Tools}{: Vim, VS Code, Jupyter, CVS, Git, Jira, Confluence} \\
+		\textbf{QA}{: Test Automation, SVRF, DRC, LVS, Regression Testing, Calibre PERC} \\
+		\textbf{Hardware}{: JTAG, PCIE, DFT, Boundary SCAN, ATPG, System-Level Testing, SoC Validation} \\
+		\textbf{Simulation/Design}{: Calibre PERC, SolidWorks, COMSOL, Silvaco-Athena, Pyxis} \\
+		\textbf{Yield Analysis}{: Statistical Process Control, Cp/Cpk, Power-BI, Excel, Box Plots, Heat Maps, Parametric Analysis, R} \\
+		\textbf{Process Engineering}{: Thin Films, PVD, CVD, Sputtering, Dry Etch, Metrology, Characterization, MEMS Fabrication} \\
+	}}
+\end{itemize}
+
+%--------------------------------------------------------------------------
+% PROJECTS SECTION 
+%--------------------------------------------------------------------------
+\section{Projects}
+\resumeSubHeadingListStart
+
+\item \large{\textbf{Data Science }}
+
+	\resumeSubSubheading{\textbf{FoodHub - Delivery Business Intelligence System}}{Jan 2025 -- Feb 2025}
+	\resumeItemListStart
+	\resumeItem{Conducted comprehensive data analysis of 1,898 food delivery orders across 178 NYC restaurants using Python (pandas, matplotlib, seaborn), identifying \$6,166 in commission revenue and delivering 8 specific business recommendations that could reduce average delivery time by 21\% (from 28.34 to 22.47 minutes) and potentially increase customer feedback rates from 61\% to 85\% through targeted engagement strategies}
+	\resumeItem{\textbf{Repository:} github.com/chinmayrozekar/PGPAIML\_UT\_Austin}
+	\resumeItemListEnd
+
+\vspace{5pt}
+
+\item \large{\textbf{Artificial Intelligence \& Machine Learning }}
+
+	\resumeSubSubheading{\textbf{Personal Loan Campaign}}{Feb 2025 -- March 2025}
+	\resumeItemListStart
+	\resumeItem{Built machine learning classification model for personal loan targeting using Python (scikit-learn, pandas) on 5,000 customer dataset, achieving 99.3\% recall with post-pruned decision tree that identified income \( > \$92.5K \) as primary predictor, enabling targeted campaigns to improve conversion from 9.6\% baseline}
+	\resumeItem{\textbf{Repository:} github.com/chinmayrozekar/PGPAIML\_UT\_Austin}
+	\resumeItemListEnd
+
+	\resumeSubSubheading{\textbf{EasyVisa - US Visa Approval Prediction}}{March 2025 -- May 2025}
+	\resumeItemListStart
+	\resumeItem{ Developed ensemble machine learning models for US visa approval prediction using 25,480 applications with 12 features, implementing Gradient Boosting with SMOTE oversampling to achieve 73.6\% accuracy and 81.1\% F1-score, identifying education level and prevailing wage as key approval factors for OFLC certification process optimization}
+	\resumeItem{\textbf{Repository:} github.com/chinmayrozekar/PGPAIML\_UT\_Austin}
+	\resumeItemListEnd
+
+	\resumeSubSubheading{\textbf{Neural Network-Based Customer Churn Prediction}}{March 2025 -- May 2025}
+	\resumeItemListStart
+	\resumeItem{ Built deep neural network models for bank customer churn prediction using TensorFlow on 10,000 customer records, implementing SMOTE oversampling and comparing SGD vs Adam optimizers to achieve optimal recall performance for early churn detection and proactive customer retention strategies}
+	\resumeItem{\textbf{Repository:} github.com/chinmayrozekar/PGPAIML\_UT\_Austin}
+	\resumeItemListEnd
+
+	\resumeSubSubheading{\textbf{Natural Language Processing RAG-powered medical AI assistant}}{May 2025 -- June 2025}
+	\resumeItemListStart
+	\resumeItem{Developed RAG-based medical AI assistant using Mistral-7B LLM and 4,000+ page medical manual, implementing document chunking, vector embeddings (SentenceTransformers), and ChromaDB to achieve high accuracy and reduced hallucinations for healthcare decision support, with LLM-as-judge evaluation showing superior performance over baseline models}
+	\resumeItem{\textbf{Repository:} github.com/chinmayrozekar/PGPAIML\_UT\_Austin}
+	\resumeItemListEnd
+
+\vspace{5pt}
+\item \large{\textbf{Computer Vision }}
+
+	\resumeSubSubheading{\textbf{HelmNet: AI Powered Helmet Detection System}}{June 2025 -- July 2025}
+	\resumeItemListStart
+	\resumeItem{Developed computer vision safety monitoring system using VGG-16 transfer learning and CNN architectures on 631 workplace images, implementing data augmentation and achieving high accuracy for automated helmet detection to enhance workplace safety compliance in construction and industrial environments}
+	\resumeItem{\textbf{Repository:} github.com/chinmayrozekar/PGPAIML\_UT\_Austin}
+	\resumeItemListEnd
+
+\vspace{5pt}
+\item \textbf{ Pipeline }
+	\resumeSubSubheading{\textbf{End-to-End ML Pipeline Project}}{July 2025 -- Aug. 2025}
+	\resumeItemListStart
+	\resumeItem{Deployed production-ready MLOps solution for SuperKart retail forecasting using Flask REST API backend and Streamlit frontend, containerized with Docker and hosted on Hugging Face Spaces, serving real-time sales predictions through scalable microservices architecture processing 8,763+ transaction records with 66.8\% model accuracy for quarterly inventory planning.}
+	\resumeItem{\textbf{Repository:} github.com/chinmayrozekar/PGPAIML\_UT\_Austin}
+	\resumeItemListEnd
+
+\vspace{50pt}
+\item \textbf{Academic Projects}
+
+	\resumeSubSubheading{\textbf{Thin Film Technologies for Flexible Electronics}}{Jan 2020 -- May 2020}
+	\resumeItemListStart
+	\resumeItem{Conducted comprehensive review of thin film materials and fabrication techniques for next-generation flexible electronic devices, focusing on material properties and integration challenges.}
+	\resumeItemListEnd
+
+	\resumeSubSubheading{\textbf{MEMS Silicon Micro-robot}}{May 2018 -- Dec 2018}
+	\resumeItemListStart
+	\resumeItem{Designed and fabricated thermally actuated MEMS micro-robot using CAD/SolidWorks design and COMSOL multi-physics simulation for heat transfer analysis.}
+	\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+
+
+% \resumeProjectHeading
+% {\textbf{Review of Thin Film Technologies for Flexible Electronics} }{Jan 2020 -- May. 2020}
+% \resumeItemListStart
+% \resumeItem{Designed a simulation model for growing a 1 µm layer of flexible crystalline Si substrate on top of Tungsten metal layer using SOI method in Silvaco Athena.}
+% \resumeItemListEnd
+
+
+%--------------------------------------------------------------------------
+% EDUCATION SECTION
+%--------------------------------------------------------------------------
+\section{Education}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{University of Texas at Austin}{Austin, TX}
+{Post Graduate Program in Artificial Intelligence and Machine Learning}{Jan. 2025 -- Sept. 2025}
+
+\resumeSubheading
+{Rochester Institute of Technology}{Rochester, NY}
+{Master of Science, Electrical Engineering}{Aug. 2017 -- May 2020}
+
+\resumeSubheading
+{Bharati Vidyapeeth University}{Pune, India}
+{Bachelor of Technology, Electrical Engineering}{Aug. 2012 -- June 2016}
+\resumeSubHeadingListEnd
+
+%==========================================================================
+% END OF RESUME
+%==========================================================================
+
+\end{document}
