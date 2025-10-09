@@ -1,0 +1,9 @@
+PROMPT
+=======
+
+Hi [name],
+
+I am working as a Software QA Engineer at Siemens EDA, and currently my position has been impacted due to an organizational restructuring,
+I am immidiately looking for job and would appreciate if you could refer me for some. 
+
+
