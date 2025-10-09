@@ -2,20 +2,13 @@ INTEL
 
 ======
 
-
-
 ---------------------------------------------------------------------------------------------------------------
-
-
 
 ============
 
 ASHISH KAPOOR
 
 ============
-
-
-
 
 
 Hi Ashish Pr,
@@ -26,13 +19,13 @@ Can you please refer me for the following positions at Intel
 
 
 
-\- Design for Manufacturing Technologist
+- Design for Manufacturing Technologist
 
 https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-California-Santa-Clara/Design-for-Manufacturing-Technologist\_JR0277631?source=jobfeeds-linkedin
 
 
 
-\- SoC Design Verification Engineer
+- SoC Design Verification Engineer
 
 JR0277661
 
@@ -40,7 +33,7 @@ https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/SoC-D
 
 
 
-\- Cloud Software Development Engineer
+- Cloud Software Development Engineer
 
 JR0277690
 
@@ -48,7 +41,7 @@ https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Cloud
 
 
 
-\- Cloud Software Development Engineer
+- Cloud Software Development Engineer
 
 JR0277691
 
@@ -56,7 +49,7 @@ https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Cloud
 
 
 
-\- Cloud Software Development Engineer
+- Cloud Software Development Engineer
 
 JR0277689
 
@@ -64,7 +57,7 @@ https://intel.wd1.myworkdayjobs.com/en-US/External/job/US-Oregon-Hillsboro/Cloud
 
 
 
-\- DevOps and Validation Engineer
+- DevOps and Validation Engineer
 
 JR0277658
 
