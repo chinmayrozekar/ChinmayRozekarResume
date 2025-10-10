@@ -7,3 +7,26 @@ I am working as a Software QA Engineer at Siemens EDA, and currently my position
 I am immidiately looking for job and would appreciate if you could refer me for some. 
 
 
+
+
+Message 1 — Connection Request
+
+(short, professional, no “please refer me” talk yet)
+
+Hi Ken,
+I’m a Software QA Engineer at Siemens EDA (Calibre PERC team) with prior experience in SoC validation at AMD. I’m exploring opportunities in EDA QA and design-enablement roles, and would value connecting with you to learn more about Cadence’s current openings.
+
+Message 2 — After Connection Accepted
+
+(establish fit, keep it recruiter-friendly)
+
+Thanks for connecting, Ken.
+I’ve been working on regression automation and validation of Calibre PERC features at Siemens EDA, focusing on test coverage, log analysis, and process-driven QA for DRC/LVS/PERC flows.
+Given my background in SoC validation and EDA QA, I’d love to understand what kind of validation or tool-QA opportunities Cadence is currently hiring for.
+
+Message 3 — Referral/Direct Interest (once he engages or after ~3 days)
+
+(specific, action-oriented, easy for him to process)
+
+Ken, I came across a role on Cadence’s careers page — [Job Title, Job ID if available] — that aligns closely with my QA and EDA validation experience.
+I’d appreciate if you could confirm whether this position is still active or if there’s another similar opening I should apply to. I can share my updated resume for your review.
