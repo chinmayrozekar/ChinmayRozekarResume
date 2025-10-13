@@ -1,0 +1,51 @@
+# Interview Monologue:
+
+“Integrated circuit verification essentially ensures that a chip design is both functionally correct and physically manufacturable before tape-out.
+
+The overall flow starts right from RTL, where the designer writes Verilog or VHDL code based on the architecture specification. At this stage, we perform functional verification using simulation and formal techniques — UVM-based testbenches, constrained random tests, and assertion checks. The idea is to make sure the logic behaves exactly as intended before it moves downstream.
+
+Once the RTL is verified, the design is synthesized into a gate-level netlist. Then we do logic equivalence checking, or LEC, to confirm that synthesis didn’t alter functionality. After that, the design goes through physical implementation — floorplanning, placement, clock-tree synthesis, and routing.
+
+When the layout is ready, we enter physical verification, which is my area of specialization. Here, we use tools like Calibre for three major checks — DRC, LVS, and ERC.
+
+DRC ensures that the layout geometries follow foundry design rules — width, spacing, density, antenna, and so on.
+
+LVS checks that the layout connectivity matches the schematic or the netlist exactly.
+
+ERC flags electrical issues like shorts, opens, or floating wells.
+
+Beyond these, we perform Calibre PERC verification, which is focused on electrical and reliability intent. PERC allows us to write programmable rule checks in Tcl and SVRF to analyze complex topologies — things like voltage-domain crossings, ESD discharge paths, latch-up prevention, and gate oxide overstress. It uses the extracted netlist from LVS and performs graph-based traversal to validate the entire current path or domain interaction.
+
+In my role, I work on validating the correctness of PERC rule execution — ensuring sequential and parallel rule groups execute deterministically and produce consistent results across regressions. Essentially, we make sure the reliability deck itself is correct before it’s released to customers.
+
+After PERC and other reliability checks are clean, parasitic extraction and static timing analysis are performed to ensure timing closure, followed by power and IR-drop verification.
+
+Once DRC, LVS, PERC, timing, and power all pass sign-off, the GDSII is released for fabrication.
+
+In short, IC verification is about closing every verification loop — logical, physical, and electrical — so we can have high confidence that what we send to the fab will work exactly as designed.”
+
+
+
+# “Just briefly explain the IC verification process”? -- 1 min version
+
+Here’s the **1-minute version** — concise, senior-level, and interview-ready:
+
+---
+
+**Short Interview Version:**
+
+> “IC verification ensures that a chip design is both *functionally correct* and *physically manufacturable* before tape-out.
+>
+> It begins at the RTL stage, where we verify functionality using simulation, UVM testbenches, and formal checks. After synthesis, we run logic equivalence checking to confirm the gate-level netlist matches the RTL.
+>
+> The layout then goes through **physical verification** — DRC for geometry compliance, LVS for connectivity, and ERC for electrical correctness.
+>
+> Beyond that, **Calibre PERC** performs *reliability and electrical-intent verification* — things like ESD path validation, domain crossing, latch-up, and over-voltage checks, all defined through Tcl-based programmable rules.
+>
+> Finally, we run parasitic extraction, timing, and power-integrity analysis before sign-off. Once DRC, LVS, PERC, and timing are clean, the design is ready for tape-out.
+>
+> In short, it’s a complete loop — from logical verification to physical and reliability sign-off — ensuring the silicon behaves exactly as intended.”
+
+---
+
+

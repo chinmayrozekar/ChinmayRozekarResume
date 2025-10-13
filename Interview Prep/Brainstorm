@@ -1,0 +1,303 @@
+My experience:
+
+In Calibre PERC QA team,
+
+I used to work on calibre PERC tool which is a reliability verification tool for validating source and layout designs
+
+for validating ESD, EOS, and cell based checks
+
+Czalibre perc had logic- driven layout (LDL) interface, which allows for current density, point to point resisitance and topology checks on a source or layout netlist.
+
+
+I have developed several testcases based on customer designs to conduct several topological tests to make sure correct cells are being captured in the perc.report
+
+
+to make such testcases I had to write Testcases in SVRF syntax used with Calibre products to perform IC verification
+
+withneach new feature beeing requested by our customer, the goal was always to ensure / test the right number of nets are being repoted.
+each new feature in calibre should not result in lesser number of nets being reported such that no anamoly is observeed when observed from the TOP Cell
+
+the goal was also to measure memory and runtime performance based on calibre execution in single threaded, multi threaded and mtflex (distributed computing mode)
+mtflex is basically you RSH into a grid and just like in multi threaded operation , a calibre job is run on multiple threads.
+in MPFlex mode it is run on distributed CPU's 
+
+
+Calibre MTFLEX PROCESSING:
+
+The design is distributed across
+multiple CPUs on multiple
+networked hosts. Calibre MTflex
+executes threads on CPUs that do
+not share memory, referred to as
+remote CPUs. A communication
+path, such as a LAN or switch, is
+required between primary and
+remote hosts.
+
+
+
+
+Q. What are the details and intricacies of IC verificationould you explain me the full flow?
+
+
+Let’s go through this in a **professional, structured, and technically complete** manner.
+
+---
+
+## 1. Definition of IC Verification
+
+**IC (Integrated Circuit) Verification** ensures that the designed circuit — whether digital, analog, or mixed-signal — meets its intended functionality, performance, and manufacturability **before tape-out**. It’s the process of validating that *“the design does what it’s supposed to do”* and *“is implemented correctly down to the physical level.”*
+
+Verification starts at the **RTL (Register Transfer Level)** or **schematic level** and extends through **physical layout verification**, covering both *logical correctness* and *physical integrity*.
+
+---
+
+## 2. Types of IC Verification
+
+### A. Functional / Logical Verification
+
+* Ensures that the circuit **behaves as intended**.
+* Focuses on **design intent**, not physical geometry.
+* Domains:
+
+  1. **RTL Verification (Simulation and Formal)** – verifies logic described in Verilog/VHDL.
+  2. **Gate-level Simulation** – validates post-synthesis netlist.
+  3. **Equivalence Checking** – ensures synthesis didn’t alter functionality.
+  4. **Emulation/Prototyping** – runs hardware models on FPGA for real-world testing.
+
+### B. Physical Verification
+
+* Ensures that the **physical layout** correctly implements the logical design.
+* Focuses on **geometrical, electrical, and connectivity correctness.**
+* Domains:
+
+  1. **DRC (Design Rule Check)** – checks layout compliance with foundry rules (width, spacing, density).
+  2. **LVS (Layout vs Schematic)** – ensures physical layout matches schematic/netlist connectivity.
+  3. **ERC (Electrical Rule Check)** – finds floating gates, shorts, missing wells, etc.
+  4. **PERC (Programmable Electrical Rule Check)** – advanced ERC that validates domain crossings, ESD, latch-up, reliability constraints.
+  5. **Antenna, Density, and CMP Checks** – ensure manufacturability and yield.
+
+---
+
+## 3. End-to-End Verification Flow (Digital-Centric)
+
+### Stage 1: Specification and Design Entry
+
+* **Inputs:** Architecture spec, functional requirements.
+* **Outputs:** RTL (Verilog/VHDL/SystemVerilog).
+* Verification begins here with **testbench creation** and **assertions**.
+
+### Stage 2: RTL Functional Verification
+
+* **Tools:** Synopsys VCS, Cadence Xcelium, Siemens Questa.
+* **Methods:**
+
+  * Directed testing
+  * Constrained random testing (UVM/OVM)
+  * Formal property checking
+  * Code coverage and functional coverage analysis
+* **Goal:** Exhaustively validate logical behavior of the RTL.
+
+### Stage 3: Synthesis Verification
+
+* **Inputs:** RTL → synthesized gate-level netlist.
+* **Tools:** Synopsys Design Compiler, Cadence Genus.
+* **Verification:**
+
+  * **Logic Equivalence Check (LEC)** using Conformal or Formality.
+  * Gate-level simulations (optional, mainly for power-up/reset checks).
+
+### Stage 4: Physical Implementation
+
+* **Steps:** Floorplanning → Placement → Clock Tree Synthesis → Routing.
+* **Toolchains:** Cadence Innovus, Synopsys ICC2, Siemens Aprisa.
+* **Verification:** Incremental DRC/LVS during each step to ensure layout integrity.
+
+### Stage 5: Physical Verification
+
+* **Tools:** Siemens Calibre, Synopsys IC Validator, Cadence Pegasus.
+* **Steps:**
+
+  1. **DRC** – Geometry checks against foundry rule deck.
+  2. **LVS** – Netlist extraction and comparison with schematic.
+  3. **ERC/PERC** – Detect shorts, missing connections, reliability issues.
+  4. **Antenna and Density Checks** – Fabrication constraints.
+
+### Stage 6: Parasitic Extraction and Timing Verification
+
+* **RC Extraction:** Using Calibre xACT or StarRC.
+* **Static Timing Analysis (STA):** PrimeTime, Tempus – verifies timing closure.
+* **Signal Integrity Analysis:** Crosstalk, noise, IR drop.
+
+### Stage 7: Power and Reliability Verification
+
+* **EM/IR Checks:** RedHawk, Voltus, Calibre PERC.
+* **ESD/Latch-Up:** Domain-based current path validation using PERC.
+* **Aging/Reliability:** Simulates long-term transistor degradation.
+
+### Stage 8: Signoff and Tape-Out
+
+* Verification signoff reports are generated:
+
+  * DRC: 0 errors
+  * LVS: clean
+  * ERC/PERC: all violations reviewed/waived
+  * STA: timing closed
+  * Power and thermal: within limits
+* GDSII/OASIS sent to foundry for fabrication.
+
+---
+
+## 4. Analog and Mixed-Signal Verification (Complementary Flow)
+
+* **Simulation:** SPICE (Spectre, HSPICE, Eldo) at schematic or post-layout.
+* **Monte Carlo, PVT corners:** Assess process, voltage, temperature variation.
+* **AMS Co-simulation:** For analog-digital interfaces (Spectre AMS, Questa ADMS).
+* **Parasitic back-annotation:** To simulate with extracted RC for realistic performance.
+
+---
+
+## 5. Key Interactions Between Flows
+
+| Verification Domain | Upstream Dependency            | Tool Example    | Output/Result        |
+| ------------------- | ------------------------------ | --------------- | -------------------- |
+| RTL Simulation      | RTL Design                     | Questa/VCS      | Functional Pass/Fail |
+| Formal Verification | RTL Assertions                 | JasperGold      | Property Proofs      |
+| Synthesis           | RTL                            | Design Compiler | Gate Netlist         |
+| Equivalence         | RTL vs Netlist                 | Formality       | Match Report         |
+| DRC/LVS             | Layout                         | Calibre         | Clean Layout         |
+| STA                 | Netlist + Parasitics           | PrimeTime       | Timing Slack         |
+| PERC                | Layout + Netlist + Constraints | Calibre PERC    | Reliability Report   |
+
+---
+
+## 6. Intricacies and Real-World Considerations
+
+1. **Corner Cases & Coverage Closure:** Verification is never truly “complete” — it’s driven by coverage goals.
+2. **Parallel Execution:** Verification, synthesis, and P&R often run concurrently with feedback loops.
+3. **Incremental Verification:** Large SoCs are verified hierarchically (block → subsystem → top level).
+4. **Signoff Ownership:** Different teams (Design, Verification, Physical, Reliability) own their respective signoffs.
+5. **Foundry Rule Decks:** DRC/LVS/PERC decks are tightly versioned per technology node and process variant (e.g., TSMC N5 vs GF12LP).
+
+---
+
+If you’d like, I can provide:
+
+1. A **visual block diagram** of this entire flow.
+2. Or a **detailed breakdown of Calibre PERC flow** (reliability-focused verification) — relevant to your domain at Siemens EDA.
+
+Would you like me to continue with one of those?
+
+
+ ┌──────────────────────────────────────────────────────────────────┐
+ │                   1. SPECIFICATION & DESIGN ENTRY                │
+ │  ─────────────────────────────────────────────────────────────── │
+ │  Inputs: Architecture docs, functional spec                      │
+ │  Outputs: RTL / Schematic (Verilog, VHDL, SPICE)                 │
+ │  Verification: Assertions, testbench planning, linting           │
+ └──────────────────────────────────────────────────────────────────┘
+                 │
+                 ▼
+ ┌──────────────────────────────────────────────────────────────────┐
+ │                   2. FUNCTIONAL / LOGICAL VERIFICATION           │
+ │  Tools: Siemens Questa, Cadence Xcelium, Synopsys VCS            │
+ │  Techniques: UVM testbench, Constrained random, Formal proofs    │
+ │  Outputs: Coverage metrics, Assertion logs                       │
+ └──────────────────────────────────────────────────────────────────┘
+                 │
+                 ▼
+ ┌──────────────────────────────────────────────────────────────────┐
+ │                   3. SYNTHESIS & EQUIVALENCE CHECK               │
+ │  Tools: Synopsys Design Compiler, Cadence Genus, Formality       │
+ │  Goal: Map RTL → gate-level netlist, maintain logical equivalence │
+ │  Verification: Formal equivalence (LEC)                          │
+ └──────────────────────────────────────────────────────────────────┘
+                 │
+                 ▼
+ ┌──────────────────────────────────────────────────────────────────┐
+ │                   4. PHYSICAL IMPLEMENTATION                     │
+ │  Steps: Floorplan → Placement → CTS → Routing                    │
+ │  Tools: Innovus, ICC2, Aprisa                                   │
+ │  Verification: Incremental DRC/LVS/ERC                           │
+ └──────────────────────────────────────────────────────────────────┘
+                 │
+                 ▼
+ ┌──────────────────────────────────────────────────────────────────┐
+ │                   5. PHYSICAL VERIFICATION                       │
+ │  Tools: Siemens Calibre, Synopsys ICV, Cadence Pegasus           │
+ │  Stages:                                                         │
+ │     - DRC  → geometry & spacing rules                            │
+ │     - LVS  → layout vs schematic equivalence                     │
+ │     - ERC  → shorts, opens, floating nodes                       │
+ │     - PERC → domain, ESD, reliability, latch-up checks           │
+ └──────────────────────────────────────────────────────────────────┘
+                 │
+                 ▼
+ ┌──────────────────────────────────────────────────────────────────┐
+ │                   6. PARASITIC EXTRACTION & STA                  │
+ │  Tools: Calibre xACT, StarRC, PrimeTime, Tempus                  │
+ │  Checks: Timing closure, crosstalk, IR-drop, noise               │
+ └──────────────────────────────────────────────────────────────────┘
+                 │
+                 ▼
+ ┌──────────────────────────────────────────────────────────────────┐
+ │                   7. POWER / RELIABILITY SIGN-OFF                │
+ │  Tools: Calibre PERC, RedHawk, Voltus                            │
+ │  Goals: Verify EM/IR, ESD, latch-up, multi-domain interactions   │
+ └──────────────────────────────────────────────────────────────────┘
+                 │
+                 ▼
+ ┌──────────────────────────────────────────────────────────────────┐
+ │                   8. SIGNOFF & TAPE-OUT                          │
+ │  Deliverables: Clean DRC/LVS/ERC/PERC reports, timing closed     │
+ │  Output: GDSII/OASIS sent to foundry                             │
+ └──────────────────────────────────────────────────────────────────┘
+
+
+
+
+
+                 ┌──────────────────────────────────────┐
+                 │            Inputs                   │
+                 │  - Layout (GDSII/OASIS)             │
+                 │  - Schematic/Netlist (SPICE/Verilog)│
+                 │  - Rule deck (SVRF + Tcl)           │
+                 │  - Voltage domain map (CPF/UPF)     │
+                 └──────────────────────────────────────┘
+                                 │
+                                 ▼
+       ┌──────────────────────────────────────────────────────┐
+       │   Step 1: Topology Extraction                        │
+       │   - Extract nets, devices, and interconnect graph    │
+       │   - Identify domain boundaries and protection paths  │
+       └──────────────────────────────────────────────────────┘
+                                 │
+                                 ▼
+       ┌──────────────────────────────────────────────────────┐
+       │   Step 2: Electrical Analysis                        │
+       │   - Net traversal algorithms (voltage propagation)   │
+       │   - ESD discharge path tracing                       │
+       │   - Latch-up current path tracing                    │
+       │   - Device stack recognition (series/parallel)       │
+       └──────────────────────────────────────────────────────┘
+                                 │
+                                 ▼
+       ┌──────────────────────────────────────────────────────┐
+       │   Step 3: Rule Evaluation                            │
+       │   - Domain crossing checks (e.g., 1.8 V → 3.3 V)     │
+       │   - ESD clamp existence / distance rules             │
+       │   - Power-ground continuity                          │
+       │   - FET gate oxide over-voltage checks               │
+       └──────────────────────────────────────────────────────┘
+                                 │
+                                 ▼
+       ┌──────────────────────────────────────────────────────┐
+       │   Step 4: Report Generation & Debug                  │
+       │   - PERC RVE visualization                           │
+       │   - Rule-wise CSV/XML reports                        │
+       │   - Net highlighting for debug                       │
+       └──────────────────────────────────────────────────────┘
+
+
+
+Q. How would you explain this in an Interview?

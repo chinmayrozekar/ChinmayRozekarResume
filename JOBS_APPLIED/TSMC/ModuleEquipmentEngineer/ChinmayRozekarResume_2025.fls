@@ -1,8 +1,8 @@
-PWD /Users/chinmayrozekar/Dev/Git/ChinmayRozekarResume/CURRENT_RESUME
+PWD /Users/chinmayrozekar/Dev/Git/ChinmayRozekarResume/TSMC/ModuleEquipmentEngineer
 INPUT /usr/local/texlive/2025/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/chinmayrozekar/Dev/Git/ChinmayRozekarResume/CURRENT_RESUME/ChinmayRozekarResume_2025.tex
+INPUT /Users/chinmayrozekar/Dev/Git/ChinmayRozekarResume/TSMC/ModuleEquipmentEngineer/ChinmayRozekarResume_2025.tex
 OUTPUT ChinmayRozekarResume_2025.log
 INPUT /usr/local/texlive/2025/texmf-dist/tex/generic/pdftex/glyphtounicode.tex
 INPUT /usr/local/texlive/2025/texmf-dist/tex/generic/pdftex/glyphtounicode.tex
@@ -164,10 +164,6 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/latex-fonts/lasy7.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/bitstrea/charter/bchri7t.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/bitstrea/charter/bchr7t.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/bitstrea/charter/bchbi7t.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ts1bch.fd
-INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ts1bch.fd
-INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/psnfss/ts1bch.fd
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/bitstrea/charter/bchr8c.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/bitstrea/charter/bchb7t.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/bitstrea/charter/bchbc7t.vf
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/bitstrea/charter/bchb8r.tfm
@@ -189,7 +185,6 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/bitstrea/charter/bchri7t.vf
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/bitstrea/charter/bchri8r.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/bitstrea/charter/bchbi7t.vf
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/bitstrea/charter/bchbi8r.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/bitstrea/charter/bchr8c.vf
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/bitstrea/charter/bchb7t.vf
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/bitstrea/charter/bchb8r.tfm
 INPUT ChinmayRozekarResume_2025.aux
@@ -199,7 +194,5 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/bitstrea/charter/bchb8a.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/bitstrea/charter/bchbi8a.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/bitstrea/charter/bchr8a.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/bitstrea/charter/bchri8a.pfb
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb

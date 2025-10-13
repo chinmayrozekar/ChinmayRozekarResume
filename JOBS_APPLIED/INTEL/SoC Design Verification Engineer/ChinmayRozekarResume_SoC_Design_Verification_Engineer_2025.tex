@@ -45,17 +45,7 @@
 %--------------------------------------------------------------------------
 % DOCUMENT CLASS & PACKAGE IMPORTS
 %--------------------------------------------------------------------------
-\documentclass[letterpaper,10pt]{article}
-% Sans-serif options:
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% Serif options:
-% \usepackage{CormorantGaramond}
-\usepackage{charter}
-
+\documentclass[letterpaper,11pt]{article}
 
 % Core packages for layout and formatting
 \usepackage{latexsym}
@@ -192,11 +182,9 @@
 % Current header format:
 \begin{center}
 	\textbf{\Huge \scshape Chinmay Rozekar} \\ \vspace{1pt}
-	\small Wilsonville, OR $|$ \href{mailto:}{chinmay.rozekar@gmail.com} $|$ 
-		\href{Linkedin:}{linkedin.com/in/chinmayrozekar} 
-
-	% \href{Linkedin:}{linkedin.com/in/chinmayrozekar} $|$ 
-	% \href{Github:}{github.com/chinmayrozekar} 
+	\small 646-510-5699 $|$ \href{mailto:}{chinmay.rozekar@gmail.com} $|$ 
+	\href{Linkedin:}{linkedin.com/in/chinmayrozekar} $|$ 
+	\href{Github:}{github.com/chinmayrozekar} 
 \end{center}
 
 
@@ -226,28 +214,7 @@
 \section{Professional Summary}
 \vspace{2pt}
 Software QA Engineer with 5+ years in semiconductor design validation (Siemens EDA, AMD). Experienced in regression automation, SoC validation, and data-driven QA optimization using Python, TCL, and Linux.
-% \vspace{-8pt}
-
-
-
-%--------------------------------------------------------------------------
-% TECHNICAL SKILLS SECTION
-%--------------------------------------------------------------------------
-
-\section{Technical Skills}
-% \begin{itemize}[leftmargin=0.15in, label={}]
-    % \small{\item{
-        \textbf{Languages}{: Shell, Python, TCL/TK, SVRF, C/C++, Perl} \\
-        \textbf{AI/ML}{: TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, OpenCV, Transformers, RAG Pipelines} \\
-        \textbf{CI/CD}{: GitHub, CVS, Gitlab, Atlassian BitBucket, Jira, Confluence, Docker} \\
-        \textbf{Development Methodologies}{: Agile, Scrum, Kanban, Waterfall} \\
-		\textbf{QA \& Verification}{: Test Automation, DRC, LVS, Calibre PERC, Regression Validation, Rule Debugging} \\
-        \textbf{Hardware Validation}{: SoC Validation, JTAG, PCIe, System-Level Testing} \\
-        \textbf{Statistical Analysis}{: SPC, Cp/Cpk, Box Plots, Parametric Yield Analysis} \\
-		\textbf{Certifications:} \textit{Calibre PERC (Siemens Software, 2024)}; \textit{Advanced PERC Rule Writing (Siemens Software, 2025)}
-
-    % }}
-% \end{itemize}
+\vspace{-8pt}
 
 
 %--------------------------------------------------------------------------
@@ -258,9 +225,14 @@ Software QA Engineer with 5+ years in semiconductor design validation (Siemens E
 
 
 % Siemens EDA Software QA Engineer position
-
 \resumeSubheading{Software QA Engineer}{July 2024 -- Present}{Siemens EDA (Mentor Graphics)}{Wilsonville, OR}
 \resumeItemListStart
+
+
+% \resumeItem{Designed and maintained detailed test cases for Calibre PERC features, achieving over 90\% regression coverage and contributing to quarterly product releases.}
+% \resumeItem{Automated key QA tasks such as test case cloning, export management, and validation log parsing for SVRF, DRC, and LVS tests, reducing manual errors and cutting regression cycle times by 20\%.}
+% \resumeItem{Collaborated with developers and QA engineers to troubleshoot and resolve critical product issues, improving test failure diagnostics and reducing defect resolution time by 15\% over the project period.}
+% \resumeItem{Implemented standardized workflows to improve test data handling and result validation, resulting in consistent and reproducible test outputs verified on monthly validation cycles.}
 
 \resumeItem{Validated Calibre PERC features for reliability verification (ESD, EOS, and topology-based checks) across customer-scale IC designs, ensuring consistent rule behavior and deterministic sign-off results.}
 \resumeItem{Developed and maintained SVRF-based testcases to verify Logic-Driven Layout (LDL) functionality including current-density, point-to-point resistance, and device-topology checks.}
@@ -268,8 +240,13 @@ Software QA Engineer with 5+ years in semiconductor design validation (Siemens E
 \resumeItem{Analyzed runtime and memory performance of Calibre PERC under single-threaded, multi-threaded, and MTFlex (distributed) execution modes; identified scaling bottlenecks and supported performance optimization.}
 \resumeItem{Automated repetitive QA tasks (testcase cloning, export management, log parsing) to reduce manual validation time by \textasciitilde20\% and improve reproducibility across monthly regression runs.}
 \resumeItem{Collaborated with developers to diagnose rule-sequencing and execution anomalies, validating correctness of sequential and parallel rule groups in the PERC framework.}
-\resumeItem{Delivered clean regression baselines with more than 90\% testcase coverage, directly supporting quarterly Calibre PERC product releases and customer reliability decks.}
+\resumeItem{Delivered clean regression baselines with $>$90\% testcase coverage, directly supporting quarterly Calibre PERC product releases and customer reliability decks.}
 \resumeItem{Created a Python tool to compare Calibre PERC output files using regex parsing, enabling structured validation of rule attributes, improving traceability, and reducing manual QA effort across regression cycles.}
+
+
+
+
+
 
 
 \resumeItemListEnd
@@ -317,7 +294,18 @@ Software QA Engineer with 5+ years in semiconductor design validation (Siemens E
 % 	}}
 % \end{itemize}
 
-
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+        \textbf{Languages}{: Shell, TCL/TK, SVRF, Python} \\
+        \textbf{AI/ML}{: TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, OpenCV, Transformers, RAG Pipelines} \\
+        \textbf{DevOps}{: Docker, CI/CD, Git, Hugging Face Spaces, MLOps} \\
+        \textbf{Tools}{: Vim, VS Code, Jupyter, CVS, Jira, Confluence} \\
+        \textbf{QA \& Verification}{: Test Automation, DRC, LVS, Calibre PERC, Regression Validation, Rule Debugging} \\
+        \textbf{Hardware Validation}{: SoC Validation, JTAG, PCIe, System-Level Testing} \\
+        \textbf{Statistical Analysis}{: SPC, Cp/Cpk, Box Plots, Parametric Yield Analysis} \\
+    }}
+\end{itemize}
 
 
 %--------------------------------------------------------------------------
@@ -334,15 +322,15 @@ Software QA Engineer with 5+ years in semiconductor design validation (Siemens E
 	\resumeItem{\textbf{Repository:} github.com/chinmayrozekar/PGPAIML\_UT\_Austin}
 	\resumeItemListEnd
 
-% \vspace{5pt}
+\vspace{5pt}
 
 % \item \large{\textbf{Artificial Intelligence \& Machine Learning }}
 
-	\resumeSubSubheading{\textbf{Personal Loan Campaign}}{}
-	\resumeItemListStart
-	\resumeItem{Built machine learning classification model for personal loan targeting using Python (scikit-learn, pandas) on 5,000 customer dataset, achieving 99.3\% recall with post-pruned decision tree that identified income \( > \$92.5K \) as primary predictor, enabling targeted campaigns to improve conversion from 9.6\% baseline}
-	\resumeItem{\textbf{Repository:} github.com/chinmayrozekar/PGPAIML\_UT\_Austin}
-	\resumeItemListEnd
+	% \resumeSubSubheading{\textbf{Personal Loan Campaign}}{Feb 2025 -- March 2025}
+	% \resumeItemListStart
+	% \resumeItem{Built machine learning classification model for personal loan targeting using Python (scikit-learn, pandas) on 5,000 customer dataset, achieving 99.3\% recall with post-pruned decision tree that identified income \( > \$92.5K \) as primary predictor, enabling targeted campaigns to improve conversion from 9.6\% baseline}
+	% \resumeItem{\textbf{Repository:} github.com/chinmayrozekar/PGPAIML\_UT\_Austin}
+	% \resumeItemListEnd
 
 	\resumeSubSubheading{\textbf{EasyVisa - US Visa Approval Prediction}}{}
 	\resumeItemListStart
@@ -362,7 +350,7 @@ Software QA Engineer with 5+ years in semiconductor design validation (Siemens E
 	\resumeItem{\textbf{Repository:} github.com/chinmayrozekar/PGPAIML\_UT\_Austin}
 	\resumeItemListEnd
 
-% \vspace{5pt}
+\vspace{5pt}
 % \item \large{\textbf{Computer Vision }}
 
 	\resumeSubSubheading{\textbf{HelmNet: AI Powered Helmet Detection System}}{}
@@ -371,17 +359,15 @@ Software QA Engineer with 5+ years in semiconductor design validation (Siemens E
 	\resumeItem{\textbf{Repository:} github.com/chinmayrozekar/PGPAIML\_UT\_Austin}
 	\resumeItemListEnd
 
-% \vspace{5pt}
+\vspace{5pt}
 % \item \textbf{ Pipeline }
-	\resumeSubSubheading{\textbf{ML Pipeline Project}}{}
+	\resumeSubSubheading{\textbf{End-to-End ML Pipeline Project}}{}
 	\resumeItemListStart
-	% \resumeItem{Deployed production-ready MLOps solution for SuperKart retail forecasting using Flask REST API backend and Streamlit frontend, containerized with Docker and hosted on Hugging Face Spaces, serving real-time sales predictions through scalable microservices architecture processing 8,763+ transaction records with 66.8\% model accuracy for quarterly inventory planning.}
-	\resumeItem{Deployed production-ready MLOps solution for SuperKart retail forecasting using Flask REST API backend and Streamlit frontend, containerized with Docker and hosted on Hugging Face Spaces.}
-	\resumeItem{Served real-time sales predictions through scalable microservices architecture processing 8,763+ transaction records with 66.8\% model accuracy, supporting quarterly inventory planning.}
-	\resumeItem{\textbf{Repository:} github.com/chinmayrozekar/PGPAIML\_UT\_Austin}
+	\resumeItem{Deployed production-ready MLOps solution for SuperKart retail forecasting using Flask REST API backend and Streamlit frontend, containerized with Docker and hosted on Hugging Face Spaces, serving real-time sales predictions through scalable microservices architecture processing 8,763+ transaction records with 66.8\% model accuracy for quarterly inventory planning.}
+	\resumeItem{\textbf{Repository:} github.com/chinmayrozekar/PGPAIML\_UT\_Austin }
 	\resumeItemListEnd
 
-% \vspace{5pt}
+\vspace{5pt}
 
 % \item \textbf{Academic Projects}
 
