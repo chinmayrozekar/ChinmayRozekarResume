@@ -63,6 +63,8 @@
 \usepackage{titlesec}
 \usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
+\definecolor{SectionBlue}{RGB}{0,70,140} % deep professional blue
+
 \usepackage{verbatim}
 \usepackage{enumitem}
 
@@ -111,9 +113,14 @@
 \setlength{\tabcolsep}{0in}
 
 % Section title formatting (creates the horizontal line under section names)
+% \titleformat{\section}{
+% 	\vspace{-4pt}\scshape\raggedright\large
+% }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
 \titleformat{\section}{
-	\vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+	\vspace{-4pt}\color{SectionBlue}\scshape\raggedright\large
+}{}{0em}{}[\color{SectionBlue}\titlerule \vspace{-5pt}]
+
 
 % Ensure that generated PDF is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -122,6 +129,9 @@
 % CUSTOM COMMANDS & MACROS
 %--------------------------------------------------------------------------
 % These commands define the structure and formatting for resume sections
+
+\newcommand{\blue}[1]{\textcolor{SectionBlue}{#1}}
+
 
 % Basic resume item (bullet point)
 \newcommand{\resumeItem}[1]{
@@ -191,12 +201,13 @@
 
 % Current header format:
 \begin{center}
-	\textbf{\Huge \scshape Chinmay Rozekar} \\ \vspace{1pt}
+	\textbf{\Huge \scshape \blue{Chinmay Rozekar}} \\ \vspace{1pt}
 	\small Wilsonville, OR $|$ \href{mailto:}{chinmay.rozekar@gmail.com} $|$ 
-		\href{Linkedin:}{linkedin.com/in/chinmayrozekar} 
+		\href{Linkedin:}{linkedin.com/in/chinmayrozekar} $|$ 
+		\href{Github:}{github.com/chinmayrozekar} 
 
 	% \href{Linkedin:}{linkedin.com/in/chinmayrozekar} $|$ 
-	% \href{Github:}{github.com/chinmayrozekar} 
+	
 \end{center}
 
 
@@ -223,9 +234,12 @@
 % \end{itemize}
 % \vspace{-15pt}
 
-\section{Professional Summary}
+\section{\textbf{Professional Summary}}
 \vspace{2pt}
-Software QA Engineer with 5+ years in semiconductor design validation (Siemens EDA, AMD). Experienced in regression automation, SoC validation, and data-driven QA optimization using Python, TCL, and Linux.
+
+Software QA Engineer with 5+ years of experience driving validation quality and automation efficiency in complex SoC and EDA environments. Proficient in Python, TCL, and Linux-based regression frameworks, with a track record of improving coverage, reducing test time, and enhancing system reliability through data-driven analysis.
+
+% Software QA Engineer with 5+ years in semiconductor design validation (Siemens EDA, AMD). Experienced in regression automation, SoC validation, and data-driven QA optimization using Python, TCL, and Linux.
 % \vspace{-8pt}
 
 
@@ -234,17 +248,17 @@ Software QA Engineer with 5+ years in semiconductor design validation (Siemens E
 % TECHNICAL SKILLS SECTION
 %--------------------------------------------------------------------------
 
-\section{Technical Skills}
+\section{\textbf{Technical Skills}}
 % \begin{itemize}[leftmargin=0.15in, label={}]
     % \small{\item{
-        \textbf{Languages}{: Shell, Python, TCL/TK, SVRF, C/C++, Perl} \\
-        \textbf{AI/ML}{: TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, OpenCV, Transformers, RAG Pipelines} \\
-        \textbf{CI/CD}{: GitHub, CVS, Gitlab, Atlassian BitBucket, Jira, Confluence, Docker} \\
-        \textbf{Development Methodologies}{: Agile, Scrum, Kanban, Waterfall} \\
-		\textbf{QA \& Verification}{: Test Automation, DRC, LVS, Calibre PERC, Regression Validation, Rule Debugging} \\
-        \textbf{Hardware Validation}{: SoC Validation, JTAG, PCIe, System-Level Testing} \\
-        \textbf{Statistical Analysis}{: SPC, Cp/Cpk, Box Plots, Parametric Yield Analysis} \\
-		\textbf{Certifications:} \textit{Calibre PERC (Siemens Software, 2024)}; \textit{Advanced PERC Rule Writing (Siemens Software, 2025)}
+        \textbf{\blue{Languages}}{: Shell, Python, TCL/TK, SVRF, C/C++, Perl} \\
+        \textbf{\blue{AI/ML}}{: TensorFlow, PyTorch, Scikit-learn, Pandas, NumPy, OpenCV, Transformers, RAG Pipelines} \\
+        \textbf{\blue{CI/CD}}{: GitHub, CVS, Gitlab, Atlassian BitBucket, Jira, Confluence, Docker} \\
+        \textbf{\blue{Development Methodologies}}{: Agile, Scrum, Kanban, Waterfall} \\
+		\textbf{\blue{QA \& Verification}}{: Test Automation, DRC, LVS, Calibre PERC, Regression Validation, Rule Debugging} \\
+        \textbf{\blue{Hardware Validation}}{: SoC Validation, JTAG, PCIe, System-Level Testing} \\
+        \textbf{\blue{Statistical Analysis}}{: SPC, Cp/Cpk, Box Plots, Parametric Yield Analysis} \\
+		\textbf{\blue{Certifications:}} \textit{Calibre PERC (Siemens Software, 2024)}; \textit{Advanced PERC Rule Writing (Siemens Software, 2025)}
 
     % }}
 % \end{itemize}
@@ -253,24 +267,47 @@ Software QA Engineer with 5+ years in semiconductor design validation (Siemens E
 %--------------------------------------------------------------------------
 % WORK EXPERIENCE SECTION  
 %--------------------------------------------------------------------------
-\section{Experience}
+\section{\textbf{Experience}}
 \resumeSubHeadingListStart
 
 
 % Siemens EDA Software QA Engineer position
-\resumeSubheading{Software QA Engineer}{July 2024 -- Present}{Siemens EDA (Mentor Graphics)}{Wilsonville, OR}
+\resumeSubheading{\blue{Software QA Engineer}}{July 2024 -- Present}{\blue{Siemens EDA (Mentor Graphics)}}{Wilsonville, OR}
+% \resumeItemListStart
+
+% \resumeItem{Created regression testcases for Calibre PERC reliability verification (ESD, EOS, topology-based checks) using SVRF and TVF, ensuring consistent rule behavior and stable sign-off results.}
+% \resumeItem{Developed SVRF and TCL-based scripts to test Logic-Driven Layout (LDL) checks such as current density, point-to-point resistance, and device-topology validation.}
+% \resumeItem{Wrote TVF functions to support rule-sequencing validation and automated cell-recognition tests across multiple PERC feature updates.}
+% \resumeItem{Analyzed runtime and memory performance of Calibre PERC in single-threaded, multi-threaded, and MTFlex distributed modes, identifying scaling issues and supporting optimization.}
+% \resumeItem{Automated regression setup, testcase cloning, and log parsing with Python and TCL, reducing manual QA time by roughly 20\% per regression cycle.}
+% \resumeItem{Collaborated with developers to debug rule-execution order, validate sequential and parallel rule groups, and ensure correct framework behavior.}
+% \resumeItem{Maintained regression baselines exceeding 90\% testcase coverage, directly supporting quarterly Calibre PERC releases and customer reliability decks.}
+% \resumeItem{Developed a Python-based diff tool for Calibre PERC outputs to verify rule attributes, improve traceability, and reduce manual comparison effort.}
+
+% \resumeItemListEnd
+
+
+% \resumeItemListStart
+% \resumeItem{Developed Python and TCL automation scripts to validate reliability verification flows (ESD, EOS, topology-based checks), integrating with Calibre PERC regression framework and reducing manual QA time by 20\%.}
+% \resumeItem{Designed scalable test infrastructure to execute sequential and parallel rule validation across multi-threaded and distributed MTFlex environments, ensuring stability under system-level stress conditions.}
+% \resumeItem{Built KPI dashboards and parsing utilities (Python, pandas, matplotlib) to monitor runtime, memory, and functional coverage across regression cycles, enabling data-driven release decisions.}
+% \resumeItem{Collaborated with development teams to debug tool behavior, automate rule-sequencing verification, and identify edge-case failures at OS and process-integration level.}
+% \resumeItem{Partnered with global QA teams to standardize test templates, version control (CVS), and CI workflows for cross-product quality consistency.}
+% \resumeItemListEnd
+
 \resumeItemListStart
-
-\resumeItem{Created regression testcases for Calibre PERC reliability verification (ESD, EOS, topology-based checks) using SVRF and TVF, ensuring consistent rule behavior and stable sign-off results.}
-\resumeItem{Developed SVRF and TCL-based scripts to test Logic-Driven Layout (LDL) checks such as current density, point-to-point resistance, and device-topology validation.}
-\resumeItem{Wrote TVF functions to support rule-sequencing validation and automated cell-recognition tests across multiple PERC feature updates.}
-\resumeItem{Analyzed runtime and memory performance of Calibre PERC in single-threaded, multi-threaded, and MTFlex distributed modes, identifying scaling issues and supporting optimization.}
-\resumeItem{Automated regression setup, testcase cloning, and log parsing with Python and TCL, reducing manual QA time by roughly 20\% per regression cycle.}
-\resumeItem{Collaborated with developers to debug rule-execution order, validate sequential and parallel rule groups, and ensure correct framework behavior.}
-\resumeItem{Maintained regression baselines exceeding 90\% testcase coverage, directly supporting quarterly Calibre PERC releases and customer reliability decks.}
-\resumeItem{Developed a Python-based diff tool for Calibre PERC outputs to verify rule attributes, improve traceability, and reduce manual comparison effort.}
-
+\resumeItem{Developed Python and TCL automation scripts to validate reliability verification flows (ESD, EOS, topology-based checks), integrating with Calibre PERC regression framework and reducing manual QA time by 20\%.}
+\resumeItem{Designed scalable test infrastructure to execute sequential and parallel rule validation across multi-threaded and distributed MTFlex environments, ensuring stability under system-level stress conditions.}
+\resumeItem{Built KPI dashboards and parsing utilities (Python, pandas, matplotlib) to monitor runtime, memory, and functional coverage across regression cycles, enabling data-driven release decisions.}
+\resumeItem{Collaborated with development teams to debug tool behavior, automate rule-sequencing verification, and identify edge-case failures at OS and process-integration level.}
+\resumeItem{Partnered with global QA teams to standardize test templates, version control (Git), and CI workflows for cross-product quality consistency.}
+\resumeItem{Enhanced regression reliability by introducing automated pre-check validation scripts that detected setup inconsistencies before test execution, reducing nightly job failures by 15\%.}
+\resumeItem{Integrated Jenkins-based continuous validation pipelines to run multi-configuration regressions and publish real-time metrics, improving visibility of test health across global teams.}
+\resumeItem{Authored internal QA documentation and onboarding guides for Calibre PERC feature validation, reducing training time for new engineers by 30\%.}
 \resumeItemListEnd
+
+
+
 
 % AMD Product Development Engineer position
 % \resumeSubheading
@@ -294,17 +331,27 @@ Software QA Engineer with 5+ years in semiconductor design validation (Siemens E
 % \resumeItemListEnd
 
 
-\resumeSubheading{Product Development Engineer (System-Level Test)}{July 2020 -- March 2024}{Advanced Micro Devices (AMD)}{Austin, TX}
+\resumeSubheading{\blue{Product Development Engineer (System-Level Test)}}{July 2020 -- March 2024}{\blue{Advanced Micro Devices (AMD)}}{Austin, TX}
 \resumeItemListStart
 
-\resumeItem{Led system-level testing and bring-up for AMD Ryzen 8040 APU family, developing and executing test programs across multiple SoC IPs from EVT to production.}
-\resumeItem{Created and maintained production test programs for device characterization, measuring IR drop, voltage drop, and power limits across test chips and full SoCs.}
-\resumeItem{Analyzed silicon failures, debugged BIOS and memory issues, and coordinated with IP and validation teams to identify and resolve design-related defects.}
-\resumeItem{Implemented yield analysis and test-time reduction strategies, removing redundant tests and improving throughput by 10\% while lowering overall validation cost.}
-\resumeItem{Developed automated scripts and workflows for data logging, test scheduling, and RMA part diagnostics, reducing manual debug time and increasing test repeatability.}
-\resumeItem{Performed large-volume stress testing on marginal parts to identify low-SIDD units and improve parametric screening for reliability and yield.}
-\resumeItem{Collaborated with hardware and board design teams to debug test handlers, optimize work orders, and maintain stable high-volume test operations.}
+% \resumeItem{Led system-level testing and bring-up for AMD Ryzen 8040 APU family, developing and executing test programs across multiple SoC IPs from EVT to production.}
+% \resumeItem{Created and maintained production test programs for device characterization, measuring IR drop, voltage drop, and power limits across test chips and full SoCs.}
+% \resumeItem{Analyzed silicon failures, debugged BIOS and memory issues, and coordinated with IP and validation teams to identify and resolve design-related defects.}
+% \resumeItem{Implemented yield analysis and test-time reduction strategies, removing redundant tests and improving throughput by 10\% while lowering overall validation cost.}
+% \resumeItem{Developed automated scripts and workflows for data logging, test scheduling, and RMA part diagnostics, reducing manual debug time and increasing test repeatability.}
+% \resumeItem{Performed large-volume stress testing on marginal parts to identify low-SIDD units and improve parametric screening for reliability and yield.}
+% \resumeItem{Collaborated with hardware and board design teams to debug test handlers, optimize work orders, and maintain stable high-volume test operations.}
 
+% \resumeItemListEnd
+
+
+
+% \resumeItemListStart
+\resumeItem{Owned end-to-end post-silicon validation for CPU bring-up, integrating 20+ diagnostic suites into unified test flows to evaluate power, thermal, and performance metrics at the system level.}
+\resumeItem{Automated data collection and analysis using Python, Perl, and STDF parsing to extract KPIs, correlate test coverage, and identify yield and reliability trends.}
+\resumeItem{Led cross-functional debugging efforts with diag, firmware, and validation teams to isolate system failures across BIOS, OS, and hardware boundaries.}
+\resumeItem{Developed regression orchestration pipelines and Jenkins/Power-BI dashboards for monitoring test execution, improving test throughput by 30\%.}
+\resumeItem{Coordinated program milestones and test readiness reviews with internal and partner teams, ensuring timely silicon qualification and KPI compliance.}
 \resumeItemListEnd
 
 
@@ -336,74 +383,46 @@ Software QA Engineer with 5+ years in semiconductor design validation (Siemens E
 %--------------------------------------------------------------------------
 % PROJECTS SECTION 
 %--------------------------------------------------------------------------
-\section{Projects}
+\section{\textbf{Projects}}
 \resumeSubHeadingListStart
 
 % \item \large{\textbf{Data Science }}
 
-	\resumeSubSubheading{\textbf{FoodHub - Delivery Business Intelligence System}}{}
+	\resumeSubSubheading{\textbf{\blue{FoodHub - Delivery Business Intelligence System}}}{}
 	\resumeItemListStart
 	\resumeItem{Conducted comprehensive data analysis of 1,898 food delivery orders across 178 NYC restaurants using Python (pandas, matplotlib, seaborn), identifying \$6,166 in commission revenue and delivering 8 specific business recommendations that could reduce average delivery time by 21\% (from 28.34 to 22.47 minutes) and potentially increase customer feedback rates from 61\% to 85\% through targeted engagement strategies}
-	\resumeItem{\textbf{Repository:} github.com/chinmayrozekar/PGPAIML\_UT\_Austin}
 	\resumeItemListEnd
 
-% \vspace{5pt}
-
-% \item \large{\textbf{Artificial Intelligence \& Machine Learning }}
-
-	\resumeSubSubheading{\textbf{Personal Loan Campaign}}{}
-	\resumeItemListStart
-	\resumeItem{Built machine learning classification model for personal loan targeting using Python (scikit-learn, pandas) on 5,000 customer dataset, achieving 99.3\% recall with post-pruned decision tree that identified income \( > \$92.5K \) as primary predictor, enabling targeted campaigns to improve conversion from 9.6\% baseline}
-	\resumeItem{\textbf{Repository:} github.com/chinmayrozekar/PGPAIML\_UT\_Austin}
-	\resumeItemListEnd
-
-	\resumeSubSubheading{\textbf{EasyVisa - US Visa Approval Prediction}}{}
-	\resumeItemListStart
-	\resumeItem{ Developed ensemble machine learning models for US visa approval prediction using 25,480 applications with 12 features, implementing Gradient Boosting with SMOTE oversampling to achieve 73.6\% accuracy and 81.1\% F1-score, identifying education level and prevailing wage as key approval factors for OFLC certification process optimization}
-	\resumeItem{\textbf{Repository:} github.com/chinmayrozekar/PGPAIML\_UT\_Austin}
-	\resumeItemListEnd
-
-	\resumeSubSubheading{\textbf{Neural Network-Based Customer Churn Prediction}}{}
-	\resumeItemListStart
-	\resumeItem{ Built deep neural network models for bank customer churn prediction using TensorFlow on 10,000 customer records, implementing SMOTE oversampling and comparing SGD vs Adam optimizers to achieve optimal recall performance for early churn detection and proactive customer retention strategies}
-	\resumeItem{\textbf{Repository:} github.com/chinmayrozekar/PGPAIML\_UT\_Austin}
-	\resumeItemListEnd
-
-	\resumeSubSubheading{\textbf{Natural Language Processing RAG-powered medical AI assistant}}{}
-	\resumeItemListStart
-	\resumeItem{Developed RAG-based medical AI assistant using Mistral-7B LLM and 4,000+ page medical manual, implementing document chunking, vector embeddings (SentenceTransformers), and ChromaDB to achieve high accuracy and reduced hallucinations for healthcare decision support, with LLM-as-judge evaluation showing superior performance over baseline models}
-	\resumeItem{\textbf{Repository:} github.com/chinmayrozekar/PGPAIML\_UT\_Austin}
-	\resumeItemListEnd
-
-% \vspace{5pt}
-% \item \large{\textbf{Computer Vision }}
-
-	\resumeSubSubheading{\textbf{HelmNet: AI Powered Helmet Detection System}}{}
-	\resumeItemListStart
-	\resumeItem{Developed computer vision safety monitoring system using VGG-16 transfer learning and CNN architectures on 631 workplace images, implementing data augmentation and achieving high accuracy for automated helmet detection to enhance workplace safety compliance in construction and industrial environments}
-	\resumeItem{\textbf{Repository:} github.com/chinmayrozekar/PGPAIML\_UT\_Austin}
-	\resumeItemListEnd
-
-% \vspace{5pt}
-% \item \textbf{ Pipeline }
-	\resumeSubSubheading{\textbf{ML Pipeline Project}}{}
+	\resumeSubSubheading{\textbf{\blue{ML Pipeline Project}}}{}
 	\resumeItemListStart
 	% \resumeItem{Deployed production-ready MLOps solution for SuperKart retail forecasting using Flask REST API backend and Streamlit frontend, containerized with Docker and hosted on Hugging Face Spaces, serving real-time sales predictions through scalable microservices architecture processing 8,763+ transaction records with 66.8\% model accuracy for quarterly inventory planning.}
 	\resumeItem{Deployed production-ready MLOps solution for SuperKart retail forecasting using Flask REST API backend and Streamlit frontend, containerized with Docker and hosted on Hugging Face Spaces.}
 	\resumeItem{Served real-time sales predictions through scalable microservices architecture processing 8,763+ transaction records with 66.8\% model accuracy, supporting quarterly inventory planning.}
-	\resumeItem{\textbf{Repository:} github.com/chinmayrozekar/PGPAIML\_UT\_Austin}
 	\resumeItemListEnd
 
-% \vspace{5pt}
+	\resumeSubSubheading{\textbf{\blue{Natural Language Processing RAG-powered medical AI assistant}}}{}
+	\resumeItemListStart
+	\resumeItem{Developed RAG-based medical AI assistant using Mistral-7B LLM and 4,000+ page medical manual, implementing document chunking, vector embeddings (SentenceTransformers), and ChromaDB to achieve high accuracy and reduced hallucinations for healthcare decision support, with LLM-as-judge evaluation showing superior performance over baseline models}
+	% \resumeItem{\textbf{Repository:} github.com/chinmayrozekar/PGPAIML\_UT\_Austin}
+	\resumeItemListEnd
 
-% \item \textbf{Academic Projects}
+	\resumeSubSubheading{\textbf{\blue{HelmNet: AI Powered Helmet Detection System}}}{}
+	\resumeItemListStart
+	\resumeItem{Developed computer vision safety monitoring system using VGG-16 transfer learning and CNN architectures on 631 workplace images, implementing data augmentation and achieving high accuracy for automated helmet detection to enhance workplace safety compliance in construction and industrial environments}
+	\resumeItemListEnd
+
+	\resumeSubSubheading{\textbf{\blue{Predictive Analytics Portfolio (Loan, Visa, and Churn Models)}}}{}
+	\resumeItemListStart
+	\resumeItem{Developed multiple machine learning models using Python (scikit-learn, TensorFlow, pandas) across financial and immigration datasets totaling over 40,000 records. Implemented Gradient Boosting, Decision Tree, and Deep Neural Networks with SMOTE oversampling to achieve up to 99.3\% recall and 81.1\% F1-score. Identified key predictors such as income, education, and wage level for improved targeting, retention, and process optimization.}
+	\resumeItemListEnd
+
 
 	% \resumeSubSubheading{\textbf{Thin Film Technologies for Flexible Electronics}}{}
 	% \resumeItemListStart
 	% \resumeItem{Conducted comprehensive review of thin film materials and fabrication techniques for next-generation flexible electronic devices, focusing on material properties and integration challenges.}
 	% \resumeItemListEnd
 
-	\resumeSubSubheading{\textbf{MEMS Silicon Micro-robot}}{}
+	\resumeSubSubheading{\textbf{\blue{MEMS Silicon Micro-robot}}}{}
 	\resumeItemListStart
 	\resumeItem{Designed and fabricated thermally actuated MEMS micro-robot using CAD/SolidWorks design and COMSOL multi-physics simulation for heat transfer analysis.}
 	\resumeItemListEnd
@@ -426,19 +445,19 @@ Software QA Engineer with 5+ years in semiconductor design validation (Siemens E
 %--------------------------------------------------------------------------
 % EDUCATION SECTION
 %--------------------------------------------------------------------------
-\section{Education}
+\section{\textbf{Education}}
 \resumeSubHeadingListStart
 
 \resumeSubheading
-{University of Texas at Austin}{Online}
+{\blue{University of Texas at Austin}}{Online}
 {Post Graduate Program in Artificial Intelligence and Machine Learning (Part-Time) }{2025}
 
 \resumeSubheading
-{Rochester Institute of Technology}{Rochester, NY} 
+{\blue{Rochester Institute of Technology}}{Rochester, NY}
 {Master of Science, Electrical Engineering}{2020}
 
 \resumeSubheading
-{Bharati Vidyapeeth University}{Pune, India}
+{\blue{Bharati Vidyapeeth University}}{Pune, India}
 {Bachelor of Technology, Electrical Engineering}{2016}
 \resumeSubHeadingListEnd
 
